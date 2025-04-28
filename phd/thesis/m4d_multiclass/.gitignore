@@ -1,0 +1,8 @@
+.ipynb_*
+.mypy*
+__pycache__
+outputs
+metrics
+weights
+figures
+configuration_data.csv
