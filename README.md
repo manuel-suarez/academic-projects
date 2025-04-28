@@ -55,4 +55,20 @@ academic-projects/
 
     LaTeX (for reports and documentation)
 
-  
+📜 Notes
+
+    Each project folder may contain its own README.md explaining its purpose and main achievements.
+
+    All coursework and research are fully authored or co-authored by Arturo Suárez unless stated otherwise.
+
+    Sensitive datasets and restricted materials have been excluded in accordance with institutional policies.
+
+📄 License
+
+This repository is made available for educational and professional portfolio purposes.
+Individual projects may carry specific licenses inside their respective folders.
+
+---
+Thank you for exploring my academic work!  
+Feel free to visit my [Portfolio Projects Board](https://github.com/users/manuel-suarez/projects/1) to explore my professional portfolio.
+
