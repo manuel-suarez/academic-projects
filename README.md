@@ -12,17 +12,17 @@ Each section contains work from a specific stage of my academic career and demon
 
 📂 Repository Structure
 
-academic-projects/
-├── masters/
-│   ├── semester1-projects/
-│   ├── semester2-projects/
-│   └── semester3-projects/
-├── phd/
-│   ├── semester1/
-│   ├── semester2/
-│   └── thesis-experiments/
-├── README.md
-├── .gitignore
+    academic-projects/
+    ├── masters/
+    │   ├── semester1-projects/
+    │   ├── semester2-projects/
+    │   └── semester3-projects/
+    ├── phd/
+    │   ├── semester1/
+    │   ├── semester2/
+    │   └── thesis-experiments/
+    ├── README.md
+    ├── .gitignore
 
     masters/: Work completed during my Master's degree.
 
