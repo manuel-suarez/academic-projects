@@ -1,0 +1,82 @@
+\documentclass{article}
+
+\usepackage{booktabs}
+\usepackage[legalpaper, landscape, margin=0.5in]{geometry}
+
+
+\begin{document}
+
+\section{CIMAT Texture Dataset Results}
+
+\subsection{ResNet34 encoder}
+\subsubsection{Metric: precision, step: train}
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+Model & origin & texture/asm & texture/contrast & texture/dissimilarity & texture/energy & texture/entropy & texture/glcmmean & texture/glcmvariance & texture/homogeneity & texture/max \\
+\midrule
+UNet & 0.912019 & 0.730390 & 0.698612 & 0.888611 & 0.761710 & 0.842136 & 0.911184 & 0.863263 & 0.554131 & 0.575984 \\
+LinkNet & 0.948204 & 0.705196 & 0.766312 & 0.603186 & 0.611856 & 0.922685 & 0.950784 & 0.907380 & 0.578758 & 0.664884 \\
+PSPNet & 0.958031 & 0.855418 & 0.794006 & 0.528815 & 0.564523 & 0.496970 & 0.926581 & 0.891812 & 0.487072 & 0.589963 \\
+FPN & 0.973743 & 0.936292 & 0.937438 & 0.950502 & 0.887654 & 0.960513 & 0.969794 & 0.952697 & 0.900425 & 0.945317 \\
+UNet2p & 0.931030 & 0.791607 & 0.637796 & 0.564532 & 0.760709 & 0.814902 & 0.930432 & 0.897955 & 0.580094 & 0.620875 \\
+UNet3p & 0.961446 & 0.908279 & 0.729781 & 0.560751 & 0.440001 & 0.956140 & 0.968106 & 0.953297 & 0.435680 & 0.647116 \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: recall, step: train}
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+Model & origin & texture/asm & texture/contrast & texture/dissimilarity & texture/energy & texture/entropy & texture/glcmmean & texture/glcmvariance & texture/homogeneity & texture/max \\
+\midrule
+UNet & 0.939563 & 0.797152 & 0.806160 & 0.917947 & 0.846645 & 0.884648 & 0.928033 & 0.900028 & 0.589162 & 0.582348 \\
+LinkNet & 0.965046 & 0.792455 & 0.829276 & 0.784396 & 0.627517 & 0.944197 & 0.957899 & 0.944273 & 0.671950 & 0.755893 \\
+PSPNet & 0.972096 & 0.894735 & 0.854898 & 0.649261 & 0.619413 & 0.635370 & 0.948322 & 0.928747 & 0.639136 & 0.626196 \\
+FPN & 0.982453 & 0.951799 & 0.953932 & 0.964135 & 0.910102 & 0.971974 & 0.979558 & 0.966949 & 0.922976 & 0.957812 \\
+UNet2p & 0.951009 & 0.838378 & 0.751135 & 0.698251 & 0.813914 & 0.861607 & 0.944834 & 0.923377 & 0.657814 & 0.690818 \\
+UNet3p & 0.975866 & 0.916287 & 0.809338 & 0.670562 & 0.590380 & 0.967747 & 0.977341 & 0.965475 & 0.607299 & 0.637705 \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: f1score, step: train}
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+Model & origin & texture/asm & texture/contrast & texture/dissimilarity & texture/energy & texture/entropy & texture/glcmmean & texture/glcmvariance & texture/homogeneity & texture/max \\
+\midrule
+UNet & 0.925586 & 0.762312 & 0.748543 & 0.903041 & 0.801935 & 0.862869 & 0.919532 & 0.881262 & 0.571110 & 0.579148 \\
+LinkNet & 0.956551 & 0.746283 & 0.796552 & 0.681958 & 0.619588 & 0.933317 & 0.954328 & 0.925459 & 0.621882 & 0.707473 \\
+PSPNet & 0.965012 & 0.874635 & 0.823328 & 0.582881 & 0.590696 & 0.557712 & 0.937326 & 0.909905 & 0.552838 & 0.607540 \\
+FPN & 0.978079 & 0.943982 & 0.945613 & 0.957270 & 0.898738 & 0.966209 & 0.974651 & 0.959770 & 0.911561 & 0.951523 \\
+UNet2p & 0.940913 & 0.814321 & 0.689841 & 0.624312 & 0.786413 & 0.837604 & 0.937578 & 0.910488 & 0.616514 & 0.653982 \\
+UNet3p & 0.968603 & 0.912266 & 0.767504 & 0.610760 & 0.504217 & 0.961908 & 0.972701 & 0.959347 & 0.507370 & 0.642376 \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: accuracy, step: train}
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+Model & origin & texture/asm & texture/contrast & texture/dissimilarity & texture/energy & texture/entropy & texture/glcmmean & texture/glcmvariance & texture/homogeneity & texture/max \\
+\midrule
+UNet & 0.935767 & 0.793172 & 0.773840 & 0.915265 & 0.824212 & 0.883797 & 0.931124 & 0.898164 & 0.628014 & 0.648523 \\
+LinkNet & 0.963467 & 0.774897 & 0.822539 & 0.692502 & 0.672702 & 0.943278 & 0.962201 & 0.936826 & 0.653242 & 0.742120 \\
+PSPNet & 0.970780 & 0.893476 & 0.849564 & 0.599989 & 0.643219 & 0.579201 & 0.947067 & 0.922319 & 0.564956 & 0.657480 \\
+FPN & 0.981765 & 0.952944 & 0.953796 & 0.964569 & 0.914724 & 0.971563 & 0.978696 & 0.965711 & 0.925728 & 0.959238 \\
+UNet2p & 0.950491 & 0.840877 & 0.716330 & 0.649077 & 0.817296 & 0.859727 & 0.946922 & 0.922772 & 0.657927 & 0.685880 \\
+UNet3p & 0.973514 & 0.926655 & 0.791477 & 0.643196 & 0.512545 & 0.968160 & 0.977021 & 0.965786 & 0.504067 & 0.699107 \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: m\_iou, step: train}
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+Model & origin & texture/asm & texture/contrast & texture/dissimilarity & texture/energy & texture/entropy & texture/glcmmean & texture/glcmvariance & texture/homogeneity & texture/max \\
+\midrule
+UNet & 0.877259 & 0.653223 & 0.628609 & 0.841628 & 0.698226 & 0.787822 & 0.868740 & 0.812015 & 0.452622 & 0.472008\\
+LinkNet & 0.927807 & 0.629375 & 0.694980 & 0.529336 & 0.501302 & 0.890456 & 0.925088 & 0.878663 & 0.483088 & 0.586309 \\
+PSPNet & 0.941723 & 0.803844 & 0.734039 & 0.428069 & 0.469331 & 0.406965 & 0.897217 & 0.853440 & 0.393469 & 0.485110 \\
+FPN & 0.963179 & 0.907969 & 0.909808 & 0.929647 & 0.839452 & 0.943355 & 0.957236 & 0.932315 & 0.858582 & 0.919794 \\
+UNet2p & 0.903348 & 0.721198 & 0.556067 & 0.479229 & 0.686352 & 0.750403 & 0.897116 & 0.854252 & 0.486910 & 0.519566 \\
+UNet3p & 0.947168 & 0.860066 & 0.652382 & 0.472061 & 0.344495 & 0.936683 & 0.953973 & 0.932247 & 0.336945 & 0.530423 \\
+\bottomrule
+\end{tabular}
+
+\end{document}

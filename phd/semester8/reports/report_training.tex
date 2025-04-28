@@ -1,0 +1,86 @@
+\documentclass{article}
+
+\usepackage{booktabs}
+
+
+\begin{document}
+
+\section{SOS Dataset Results}
+
+\subsection{ResNet encoder}
+\subsubsection{Metric: accuracy, step: train}
+\begin{tabular}{lllll}
+\toprule
+Models & ResNet18 & ResNet18+MR (add) & ResNet18+MR (cat) & ResNet18+MR (max) \\
+\midrule
+UNet & 0.967604 & 0.971910 & 0.954046 & 0.975972 \\
+UNet++ & 0.970533 & 0.973470 & 0.957751 & 0.977437 \\
+UNet3p & 0.983704 & 0.985989 & 0.980339 & 0.986842 \\
+LinkNet & 0.977029 & 0.977370 & 0.973112 & 0.977138 \\
+PSPNet & NA & NA & NA & NA \\
+FPN & 0.986173 & 0.985032 & 0.982573 & 0.985403 \\
+MA-Net & 0.933336 & 0.955653 & 0.907368 & 0.927981 \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: precision, step: train}
+\begin{tabular}{lllll}
+\toprule
+Models & ResNet18 & ResNet18+MR (add) & ResNet18+MR (cat) & ResNet18+MR (max) \\
+\midrule
+UNet & 0.923018 & 0.932586 & 0.893155 & 0.942083 \\
+UNet++ & 0.929235 & 0.936182 & 0.900963 & 0.945471 \\
+UNet3p & 0.960355 & 0.965978 & 0.952499 & 0.967942 \\
+LinkNet & 0.944553 & 0.945139 & 0.935147 & 0.944507 \\
+PSPNet & NA & NA & NA & NA \\
+FPN & 0.966201 & 0.963739 & 0.958013 & 0.964550 \\
+MA-Net & 0.855245 & 0.899437 & 0.805827 & 0.844174 \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: recall, step: train}
+\begin{tabular}{lllll}
+\toprule
+Models & ResNet18 & ResNet18+MR (add) & ResNet18+MR (cat) & ResNet18+MR (max) \\
+\midrule
+UNet & 0.974731 & 0.978322 & 0.964182 & 0.981291 \\
+UNet++ & 0.977514 & 0.979503 & 0.967362 & 0.982441 \\
+UNet3p & 0.987148 & 0.988734 & 0.984420 & 0.989489 \\
+LinkNet & 0.982090 & 0.982596 & 0.979483 & 0.982525 \\
+PSPNet & NA & NA & NA & NA \\
+FPN & 0.989118 & 0.987937 & 0.985884 & 0.988307 \\
+MA-Net & 0.939777 & 0.961645 & 0.916021 & 0.935848 \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: f1score, step: train}
+\begin{tabular}{lllll}
+\toprule
+Models & ResNet18 & ResNet18+MR (add) & ResNet18+MR (cat) & ResNet18+MR (max) \\
+\midrule
+UNet & 0.948170 & 0.954907 & 0.927311 & 0.961287 \\
+UNet++ & 0.952764 & 0.957353 & 0.932983 & 0.963602 \\
+UNet3p & 0.973567 & 0.977224 & 0.968196 & 0.978597 \\
+LinkNet & 0.962956 & 0.963503 & 0.956802 & 0.963141 \\
+PSPNet & NA & NA & NA & NA \\
+FPN & 0.977525 & 0.975688 & 0.971748 & 0.976284 \\
+MA-Net & 0.895521 & 0.929501 & 0.857398 & 0.887651 \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: m\_iou, step: train}
+\begin{tabular}{lllll}
+\toprule
+Models & ResNet18 & ResNet18+MR (add) & ResNet18+MR (cat) & ResNet18+MR (max) \\
+\midrule
+UNet & 0.927705 & 0.936862 & 0.899732 & 0.945608 \\
+UNet++ & 0.933931 & 0.940207 & 0.907267 & 0.948794 \\
+UNet3p & 0.962607 & 0.967714 & 0.955148 & 0.969636 \\
+LinkNet & 0.947905 & 0.948654 & 0.939446 & 0.948152 \\
+PSPNet & NA & NA & NA & NA \\
+FPN & 0.968132 & 0.965569 & 0.960082 & 0.966400 \\
+MA-Net & 0.858740 & 0.902810 & 0.811003 & 0.848670 \\
+\bottomrule
+\end{tabular}
+
+\end{document}
