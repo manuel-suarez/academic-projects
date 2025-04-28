@@ -1,0 +1,201 @@
+Count models:  {'unet': 1, 'unet2p': 1, 'unet3p': 1, 'linknet': 1, 'pspnet': 1, 'fpn': 1, 'deeplabv3p': 1, 'manet': 1}
+Validate:  [False, False, False, False, False, False, False, False]
+Count encoders:  {'cbamnet': 1, 'cbamnetmr': 1, 'cbamnetmrv2_': 1, 'cbamnetmrv3_': 1, 'cbamnetmrv4_': 1, 'cbamnetmrv5_': 1, 'cbamnetmrv6_': 1, 'cbamnetmrv7_': 1, 'cbamnetmrv8_': 1, 'cbamnetmdv1_': 1, 'cbamnetmdv2_': 1, 'cbamnetmdv3_': 1, 'cbamnetmdv4_': 1}
+Validate:  [False, False, False, False, False, False, False, False, False, False, False, False, False]
+Count layers:  {'34': 1}
+Validate:  [False]
+Namespace(models=['unet', 'unet2p', 'unet3p', 'linknet', 'pspnet', 'fpn', 'deeplabv3p', 'manet'], encoders=['cbamnet', 'cbamnetmr', 'cbamnetmrv2_', 'cbamnetmrv3_', 'cbamnetmrv4_', 'cbamnetmrv5_', 'cbamnetmrv6_', 'cbamnetmrv7_', 'cbamnetmrv8_', 'cbamnetmdv1_', 'cbamnetmdv2_', 'cbamnetmdv3_', 'cbamnetmdv4_'], layers=['34'], epochs=100, metrics=['recall', 'precision', 'f1score', 'm_iou'], steps=['train', 'valid', 'test'], metrics_path='metrics', metrics_file='epoch_metrics.csv', operation_mode='per_model_encoder')
+Metrics path:  metrics
+Metrics file:  epoch_metrics.csv
+\subsubsection{Metric: recall, step: train}
+\begin{tabular}{llllllllllllll}
+\toprule
+Models & ResNet34+CBAM & ResNet34+CBAM+MR (add) & ResNet34+CBAM+MR (cat) & ResNet34+CBAM+MR (max) & ResNet34+CBAM+MR (rand) & ResNet34+CBAM+MR (alpha) & ResNet34+CBAM+MR (alpha+pos) & ResNet34+CBAM+MR (MLP) & ResNet34+CBAM+MR (CNN) & ResNet34+CBAM+MR+DAL(Channel) & ResNet34+CBAM+MR+DAL(Spatial) & ResNet34+CBAM+MR+DAL(Gated) & ResNet34+CBAM+MR+DAL(Multi) \\
+\midrule
+UNet & 0.980243 & 0.974091 & 0.965117 & 0.979237 & 0.929723 & 0.978467 & 0.982397 & 0.977532 & 0.980159 & 0.980311 & 0.974348 & 0.981983 & 0.978242 \\
+UNet++ & 0.978147 & 0.978988 & 0.968528 & 0.979933 & 0.958987 & 0.978133 & 0.985277 & 0.981116 & 0.980485 & 0.978997 & 0.980928 & 0.982821 & 0.980527 \\
+UNet3p & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+LinkNet & 0.976972 & 0.976264 & 0.975254 & 0.976148 & 0.951881 & 0.976420 & 0.977833 & 0.977457 & 0.977223 & 0.976760 & 0.976465 & 0.972616 & 0.977332 \\
+PSPNet & 0.964219 & 0.966774 & 0.961695 & 0.965362 & 0.955354 & 0.964367 & 0.949916 & 0.964508 & 0.964672 & 0.963852 & 0.964406 & 0.963559 & 0.964171 \\
+FPN & 0.982746 & 0.981737 & 0.979884 & 0.982362 & 0.964067 & 0.982945 & 0.983772 & 0.982774 & 0.983302 & 0.982965 & 0.982768 & 0.982168 & 0.981721 \\
+DeepLabV3+ & 0.975481 & 0.975201 & 0.972227 & 0.974701 & 0.961506 & 0.974184 & 0.977568 & 0.976566 & 0.975710 & 0.977641 & 0.974761 & 0.976170 & 0.975270 \\
+MA-Net & 0.979985 & 0.970475 & 0.976715 & 0.980032 & 0.941157 & 0.979792 & 0.980880 & 0.981056 & 0.981065 & 0.966836 & 0.980543 & 0.978943 & 0.976042 \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: recall, step: valid}
+\begin{tabular}{llllllllllllll}
+\toprule
+Models & ResNet34+CBAM & ResNet34+CBAM+MR (add) & ResNet34+CBAM+MR (cat) & ResNet34+CBAM+MR (max) & ResNet34+CBAM+MR (rand) & ResNet34+CBAM+MR (alpha) & ResNet34+CBAM+MR (alpha+pos) & ResNet34+CBAM+MR (MLP) & ResNet34+CBAM+MR (CNN) & ResNet34+CBAM+MR+DAL(Channel) & ResNet34+CBAM+MR+DAL(Spatial) & ResNet34+CBAM+MR+DAL(Gated) & ResNet34+CBAM+MR+DAL(Multi) \\
+\midrule
+UNet & 0.843979 & 0.868471 & 0.864205 & 0.850198 & 0.897253 & 0.858746 & 0.832749 & 0.866140 & 0.853116 & 0.857973 & 0.862058 & 0.850409 & 0.117808 \\
+UNet++ & 0.848986 & 0.841863 & 0.869161 & 0.856681 & 0.855853 & 0.857017 & 0.824170 & 0.853494 & 0.860671 & 0.850862 & 0.874176 & 0.855355 & 0.886486 \\
+UNet3p & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+LinkNet & 0.847268 & 0.861654 & 0.851790 & 0.862124 & 0.882057 & 0.852142 & 0.836323 & 0.860557 & 0.854093 & 0.853080 & 0.865230 & 0.857576 & 0.420759 \\
+PSPNet & 0.849209 & 0.859715 & 0.849986 & 0.866767 & 0.832838 & 0.853936 & 0.854518 & 0.841458 & 0.857028 & 0.843062 & 0.872003 & 0.854057 & 0.916019 \\
+FPN & 0.849144 & 0.859795 & 0.855611 & 0.846325 & 0.877521 & 0.850512 & 0.863507 & 0.848747 & 0.850706 & 0.845241 & 0.858167 & 0.862789 & 0.799840 \\
+DeepLabV3+ & 0.849535 & 0.843535 & 0.835205 & 0.857477 & 0.863129 & 0.839388 & 0.845047 & 0.860191 & 0.860767 & 0.834610 & 0.856718 & 0.844893 & 0.203494 \\
+MA-Net & 0.859893 & 0.862208 & 0.841869 & 0.853035 & 0.882745 & 0.843740 & 0.832365 & 0.876881 & 0.863643 & 0.870298 & 0.861076 & 0.870303 & 0.851698 \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: recall, step: test}
+\begin{tabular}{llllllllllllll}
+\toprule
+Models & ResNet34+CBAM & ResNet34+CBAM+MR (add) & ResNet34+CBAM+MR (cat) & ResNet34+CBAM+MR (max) & ResNet34+CBAM+MR (rand) & ResNet34+CBAM+MR (alpha) & ResNet34+CBAM+MR (alpha+pos) & ResNet34+CBAM+MR (MLP) & ResNet34+CBAM+MR (CNN) & ResNet34+CBAM+MR+DAL(Channel) & ResNet34+CBAM+MR+DAL(Spatial) & ResNet34+CBAM+MR+DAL(Gated) & ResNet34+CBAM+MR+DAL(Multi) \\
+\midrule
+UNet & 0.851411 & 0.856621 & 0.853954 & 0.854755 & 0.885248 & 0.852840 & 0.851704 & 0.869229 & 0.854899 & 0.855004 & 0.858397 & 0.859105 & 0.723782 \\
+UNet++ & 0.855845 & 0.844545 & 0.858175 & 0.853155 & 0.850368 & 0.871439 & 0.841499 & 0.847220 & 0.851227 & 0.838225 & 0.864869 & 0.863751 & 0.842466 \\
+UNet3p & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+LinkNet & 0.855762 & 0.864883 & 0.856755 & 0.867571 & 0.872243 & 0.862188 & 0.852465 & 0.863749 & 0.856630 & 0.843266 & 0.870429 & 0.855679 & 0.844001 \\
+PSPNet & 0.854678 & 0.876145 & 0.859178 & 0.868482 & 0.848539 & 0.861757 & 0.860088 & 0.850230 & 0.871542 & 0.827751 & 0.877252 & 0.848998 & 0.883437 \\
+FPN & 0.868095 & 0.871216 & 0.852781 & 0.858049 & 0.883739 & 0.857284 & 0.865316 & 0.865000 & 0.859747 & 0.825344 & 0.863850 & 0.856243 & 0.857444 \\
+DeepLabV3+ & 0.859357 & 0.848769 & 0.841817 & 0.869576 & 0.868473 & 0.857747 & 0.846872 & 0.858489 & 0.856241 & 0.824185 & 0.858121 & 0.847527 & 0.753770 \\
+MA-Net & 0.870519 & 0.861938 & 0.851965 & 0.853335 & 0.861912 & 0.848043 & 0.854966 & 0.875907 & 0.850027 & 0.845149 & 0.855398 & 0.869256 & 0.874127 \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: precision, step: train}
+\begin{tabular}{llllllllllllll}
+\toprule
+Models & ResNet34+CBAM & ResNet34+CBAM+MR (add) & ResNet34+CBAM+MR (cat) & ResNet34+CBAM+MR (max) & ResNet34+CBAM+MR (rand) & ResNet34+CBAM+MR (alpha) & ResNet34+CBAM+MR (alpha+pos) & ResNet34+CBAM+MR (MLP) & ResNet34+CBAM+MR (CNN) & ResNet34+CBAM+MR+DAL(Channel) & ResNet34+CBAM+MR+DAL(Spatial) & ResNet34+CBAM+MR+DAL(Gated) & ResNet34+CBAM+MR+DAL(Multi) \\
+\midrule
+UNet & 0.980739 & 0.974831 & 0.965851 & 0.979964 & 0.935011 & 0.979157 & 0.982883 & 0.978388 & 0.980810 & 0.980808 & 0.974901 & 0.982678 & 0.978930 \\
+UNet++ & 0.979026 & 0.979592 & 0.969161 & 0.980555 & 0.960193 & 0.979006 & 0.985598 & 0.981533 & 0.981149 & 0.979461 & 0.981553 & 0.983327 & 0.981229 \\
+UNet3p & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+LinkNet & 0.977588 & 0.976802 & 0.975899 & 0.976625 & 0.953352 & 0.976844 & 0.978359 & 0.977855 & 0.977752 & 0.977264 & 0.977277 & 0.973723 & 0.977817 \\
+PSPNet & 0.963721 & 0.966117 & 0.961167 & 0.964852 & 0.954855 & 0.963562 & 0.951943 & 0.963739 & 0.963962 & 0.963107 & 0.963725 & 0.962843 & 0.963463 \\
+FPN & 0.982835 & 0.981799 & 0.979957 & 0.982492 & 0.965322 & 0.982986 & 0.983734 & 0.982905 & 0.983445 & 0.983250 & 0.982867 & 0.982201 & 0.981846 \\
+DeepLabV3+ & 0.974989 & 0.974572 & 0.971420 & 0.974001 & 0.961100 & 0.973669 & 0.976960 & 0.975836 & 0.975265 & 0.977230 & 0.974216 & 0.975596 & 0.974712 \\
+MA-Net & 0.979975 & 0.972402 & 0.976771 & 0.980195 & 0.946967 & 0.979894 & 0.981025 & 0.981111 & 0.981113 & 0.967305 & 0.980666 & 0.979173 & 0.976353 \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: precision, step: valid}
+\begin{tabular}{llllllllllllll}
+\toprule
+Models & ResNet34+CBAM & ResNet34+CBAM+MR (add) & ResNet34+CBAM+MR (cat) & ResNet34+CBAM+MR (max) & ResNet34+CBAM+MR (rand) & ResNet34+CBAM+MR (alpha) & ResNet34+CBAM+MR (alpha+pos) & ResNet34+CBAM+MR (MLP) & ResNet34+CBAM+MR (CNN) & ResNet34+CBAM+MR+DAL(Channel) & ResNet34+CBAM+MR+DAL(Spatial) & ResNet34+CBAM+MR+DAL(Gated) & ResNet34+CBAM+MR+DAL(Multi) \\
+\midrule
+UNet & 0.957729 & 0.952112 & 0.942242 & 0.955077 & 0.931448 & 0.953554 & 0.955583 & 0.948021 & 0.963874 & 0.947454 & 0.955658 & 0.957559 & 0.982633 \\
+UNet++ & 0.958093 & 0.965696 & 0.954805 & 0.966941 & 0.943239 & 0.935039 & 0.962139 & 0.960227 & 0.957944 & 0.946694 & 0.943072 & 0.950121 & 0.400129 \\
+UNet3p & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+LinkNet & 0.956958 & 0.952248 & 0.956140 & 0.956555 & 0.943313 & 0.954738 & 0.945154 & 0.958281 & 0.955412 & 0.946481 & 0.955288 & 0.957401 & 0.986128 \\
+PSPNet & 0.962307 & 0.952946 & 0.953827 & 0.953411 & 0.968933 & 0.960490 & 0.953322 & 0.965280 & 0.956244 & 0.958918 & 0.947831 & 0.961527 & 0.483839 \\
+FPN & 0.950258 & 0.947281 & 0.964003 & 0.951534 & 0.950239 & 0.960656 & 0.937205 & 0.960105 & 0.959967 & 0.953313 & 0.957967 & 0.958268 & 0.916903 \\
+DeepLabV3+ & 0.954645 & 0.961854 & 0.962537 & 0.954153 & 0.956609 & 0.962543 & 0.945817 & 0.960062 & 0.957877 & 0.946717 & 0.957535 & 0.956757 & 0.988617 \\
+MA-Net & 0.956984 & 0.937747 & 0.961508 & 0.960344 & 0.928585 & 0.966859 & 0.946300 & 0.940859 & 0.956028 & 0.946092 & 0.958128 & 0.948323 & 0.623835 \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: precision, step: test}
+\begin{tabular}{llllllllllllll}
+\toprule
+Models & ResNet34+CBAM & ResNet34+CBAM+MR (add) & ResNet34+CBAM+MR (cat) & ResNet34+CBAM+MR (max) & ResNet34+CBAM+MR (rand) & ResNet34+CBAM+MR (alpha) & ResNet34+CBAM+MR (alpha+pos) & ResNet34+CBAM+MR (MLP) & ResNet34+CBAM+MR (CNN) & ResNet34+CBAM+MR+DAL(Channel) & ResNet34+CBAM+MR+DAL(Spatial) & ResNet34+CBAM+MR+DAL(Gated) & ResNet34+CBAM+MR+DAL(Multi) \\
+\midrule
+UNet & 0.851133 & 0.845207 & 0.833480 & 0.842849 & 0.827703 & 0.838400 & 0.846497 & 0.831804 & 0.847743 & 0.841655 & 0.838018 & 0.845415 & 0.825176 \\
+UNet++ & 0.845518 & 0.853536 & 0.845629 & 0.847481 & 0.846003 & 0.835970 & 0.853307 & 0.848112 & 0.846240 & 0.850639 & 0.836079 & 0.836732 & 0.836059 \\
+UNet3p & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+LinkNet & 0.836750 & 0.836711 & 0.836503 & 0.842558 & 0.831155 & 0.828928 & 0.848260 & 0.834754 & 0.840845 & 0.849230 & 0.836500 & 0.852102 & 0.843191 \\
+PSPNet & 0.848764 & 0.836843 & 0.845646 & 0.832386 & 0.856051 & 0.848759 & 0.844540 & 0.851900 & 0.837303 & 0.855542 & 0.830530 & 0.851315 & 0.796725 \\
+FPN & 0.845669 & 0.844085 & 0.847987 & 0.847326 & 0.836299 & 0.853279 & 0.825356 & 0.849220 & 0.849650 & 0.851338 & 0.846657 & 0.852860 & 0.845444 \\
+DeepLabV3+ & 0.841596 & 0.851289 & 0.865839 & 0.848013 & 0.839441 & 0.850356 & 0.839126 & 0.838075 & 0.845262 & 0.840015 & 0.844922 & 0.836893 & 0.875160 \\
+MA-Net & 0.840702 & 0.828483 & 0.851484 & 0.851152 & 0.833546 & 0.857031 & 0.853199 & 0.830514 & 0.846570 & 0.841961 & 0.846573 & 0.841390 & 0.837634 \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: f1score, step: train}
+\begin{tabular}{llllllllllllll}
+\toprule
+Models & ResNet34+CBAM & ResNet34+CBAM+MR (add) & ResNet34+CBAM+MR (cat) & ResNet34+CBAM+MR (max) & ResNet34+CBAM+MR (rand) & ResNet34+CBAM+MR (alpha) & ResNet34+CBAM+MR (alpha+pos) & ResNet34+CBAM+MR (MLP) & ResNet34+CBAM+MR (CNN) & ResNet34+CBAM+MR+DAL(Channel) & ResNet34+CBAM+MR+DAL(Spatial) & ResNet34+CBAM+MR+DAL(Gated) & ResNet34+CBAM+MR+DAL(Multi) \\
+\midrule
+UNet & 0.980491 & 0.974461 & 0.965484 & 0.979600 & 0.932360 & 0.978812 & 0.982640 & 0.977960 & 0.980484 & 0.980560 & 0.974625 & 0.982330 & 0.978586 \\
+UNet++ & 0.978586 & 0.979290 & 0.968845 & 0.980244 & 0.959590 & 0.978570 & 0.985437 & 0.981324 & 0.980817 & 0.979229 & 0.981241 & 0.983074 & 0.980878 \\
+UNet3p & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+LinkNet & 0.977280 & 0.976533 & 0.975577 & 0.976386 & 0.952616 & 0.976632 & 0.978096 & 0.977656 & 0.977488 & 0.977011 & 0.976871 & 0.973169 & 0.977575 \\
+PSPNet & 0.963970 & 0.966445 & 0.961431 & 0.965107 & 0.955104 & 0.963964 & 0.950928 & 0.964123 & 0.964317 & 0.963480 & 0.964065 & 0.963201 & 0.963817 \\
+FPN & 0.982791 & 0.981768 & 0.979920 & 0.982427 & 0.964694 & 0.982966 & 0.983753 & 0.982839 & 0.983373 & 0.983108 & 0.982818 & 0.982185 & 0.981783 \\
+DeepLabV3+ & 0.975235 & 0.974886 & 0.971823 & 0.974351 & 0.961303 & 0.973927 & 0.977264 & 0.976201 & 0.975488 & 0.977435 & 0.974488 & 0.975883 & 0.974991 \\
+MA-Net & 0.979980 & 0.971438 & 0.976743 & 0.980113 & 0.944053 & 0.979843 & 0.980952 & 0.981083 & 0.981089 & 0.967071 & 0.980605 & 0.979058 & 0.976198 \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: f1score, step: valid}
+\begin{tabular}{llllllllllllll}
+\toprule
+Models & ResNet34+CBAM & ResNet34+CBAM+MR (add) & ResNet34+CBAM+MR (cat) & ResNet34+CBAM+MR (max) & ResNet34+CBAM+MR (rand) & ResNet34+CBAM+MR (alpha) & ResNet34+CBAM+MR (alpha+pos) & ResNet34+CBAM+MR (MLP) & ResNet34+CBAM+MR (CNN) & ResNet34+CBAM+MR+DAL(Channel) & ResNet34+CBAM+MR+DAL(Spatial) & ResNet34+CBAM+MR+DAL(Gated) & ResNet34+CBAM+MR+DAL(Multi) \\
+\midrule
+UNet & 0.897263 & 0.908370 & 0.901538 & 0.899591 & 0.914031 & 0.903670 & 0.889947 & 0.905233 & 0.905119 & 0.900496 & 0.906448 & 0.900808 & 0.210392 \\
+UNet++ & 0.900246 & 0.899538 & 0.909972 & 0.908478 & 0.897424 & 0.894329 & 0.887826 & 0.903720 & 0.906706 & 0.896223 & 0.907318 & 0.900251 & 0.551383 \\
+UNet3p & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+LinkNet & 0.898778 & 0.904688 & 0.900953 & 0.906888 & 0.911657 & 0.900527 & 0.887414 & 0.906794 & 0.901916 & 0.897357 & 0.908032 & 0.904743 & 0.589845 \\
+PSPNet & 0.902228 & 0.903933 & 0.898917 & 0.908027 & 0.895746 & 0.904084 & 0.901220 & 0.899126 & 0.903922 & 0.897266 & 0.908337 & 0.904611 & 0.633215 \\
+FPN & 0.896860 & 0.901421 & 0.906579 & 0.895851 & 0.912433 & 0.902235 & 0.898848 & 0.900998 & 0.902040 & 0.896030 & 0.905325 & 0.908026 & 0.854380 \\
+DeepLabV3+ & 0.899028 & 0.898817 & 0.894362 & 0.903235 & 0.907468 & 0.896757 & 0.892597 & 0.907387 & 0.906730 & 0.887135 & 0.904325 & 0.897352 & 0.337515 \\
+MA-Net & 0.905844 & 0.898393 & 0.897720 & 0.903514 & 0.905085 & 0.901114 & 0.885683 & 0.907744 & 0.907490 & 0.906614 & 0.907013 & 0.907639 & 0.720172 \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: f1score, step: test}
+\begin{tabular}{llllllllllllll}
+\toprule
+Models & ResNet34+CBAM & ResNet34+CBAM+MR (add) & ResNet34+CBAM+MR (cat) & ResNet34+CBAM+MR (max) & ResNet34+CBAM+MR (rand) & ResNet34+CBAM+MR (alpha) & ResNet34+CBAM+MR (alpha+pos) & ResNet34+CBAM+MR (MLP) & ResNet34+CBAM+MR (CNN) & ResNet34+CBAM+MR+DAL(Channel) & ResNet34+CBAM+MR+DAL(Spatial) & ResNet34+CBAM+MR+DAL(Gated) & ResNet34+CBAM+MR+DAL(Multi) \\
+\midrule
+UNet & 0.851272 & 0.850876 & 0.843593 & 0.848760 & 0.855509 & 0.845559 & 0.849093 & 0.850105 & 0.851306 & 0.848277 & 0.848085 & 0.852205 & 0.771160 \\
+UNet++ & 0.850650 & 0.849017 & 0.851855 & 0.850308 & 0.848180 & 0.853336 & 0.847362 & 0.847666 & 0.848726 & 0.844387 & 0.850231 & 0.850027 & 0.839250 \\
+UNet3p & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+LinkNet & 0.846149 & 0.850564 & 0.846508 & 0.854882 & 0.851203 & 0.845231 & 0.850357 & 0.849004 & 0.848664 & 0.846238 & 0.853127 & 0.853886 & 0.843596 \\
+PSPNet & 0.851711 & 0.856043 & 0.852358 & 0.850051 & 0.852278 & 0.855209 & 0.852243 & 0.851064 & 0.854080 & 0.841417 & 0.853252 & 0.850155 & 0.837843 \\
+FPN & 0.856736 & 0.857436 & 0.850377 & 0.852654 & 0.859365 & 0.855277 & 0.844864 & 0.857037 & 0.854669 & 0.838139 & 0.855167 & 0.854548 & 0.851402 \\
+DeepLabV3+ & 0.850384 & 0.850027 & 0.853659 & 0.858659 & 0.853710 & 0.854036 & 0.842981 & 0.848159 & 0.850716 & 0.832025 & 0.851470 & 0.842177 & 0.809942 \\
+MA-Net & 0.855351 & 0.844880 & 0.851725 & 0.852242 & 0.847492 & 0.852513 & 0.854082 & 0.852607 & 0.848295 & 0.843552 & 0.850963 & 0.855096 & 0.855492 \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: m_iou, step: train}
+\begin{tabular}{llllllllllllll}
+\toprule
+Models & ResNet34+CBAM & ResNet34+CBAM+MR (add) & ResNet34+CBAM+MR (cat) & ResNet34+CBAM+MR (max) & ResNet34+CBAM+MR (rand) & ResNet34+CBAM+MR (alpha) & ResNet34+CBAM+MR (alpha+pos) & ResNet34+CBAM+MR (MLP) & ResNet34+CBAM+MR (CNN) & ResNet34+CBAM+MR+DAL(Channel) & ResNet34+CBAM+MR+DAL(Spatial) & ResNet34+CBAM+MR+DAL(Gated) & ResNet34+CBAM+MR+DAL(Multi) \\
+\midrule
+UNet & 0.972418 & 0.964071 & 0.951790 & 0.971181 & 0.908061 & 0.970086 & 0.975414 & 0.968905 & 0.972409 & 0.972513 & 0.964295 & 0.974982 & 0.969773 \\
+UNet++ & 0.969774 & 0.970749 & 0.956366 & 0.972075 & 0.943830 & 0.969751 & 0.979327 & 0.973578 & 0.972872 & 0.970663 & 0.973463 & 0.976019 & 0.972957 \\
+UNet3p & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+LinkNet & 0.967962 & 0.966929 & 0.965609 & 0.966725 & 0.934504 & 0.967065 & 0.969092 & 0.968481 & 0.968249 & 0.967590 & 0.967398 & 0.962296 & 0.968370 \\
+PSPNet & 0.949724 & 0.953083 & 0.946289 & 0.951265 & 0.937793 & 0.949712 & 0.932270 & 0.949928 & 0.950192 & 0.949056 & 0.949850 & 0.948679 & 0.949513 \\
+FPN & 0.975621 & 0.974194 & 0.971622 & 0.975114 & 0.950725 & 0.975865 & 0.976966 & 0.975689 & 0.976436 & 0.976065 & 0.975659 & 0.974775 & 0.974216 \\
+DeepLabV3+ & 0.965128 & 0.964646 & 0.960430 & 0.963908 & 0.946118 & 0.963324 & 0.967931 & 0.966460 & 0.965478 & 0.968170 & 0.964098 & 0.966022 & 0.964791 \\
+MA-Net & 0.971704 & 0.959926 & 0.967215 & 0.971890 & 0.923266 & 0.971514 & 0.973058 & 0.973240 & 0.973248 & 0.953946 & 0.972574 & 0.970425 & 0.966464 \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: m_iou, step: valid}
+\begin{tabular}{llllllllllllll}
+\toprule
+Models & ResNet34+CBAM & ResNet34+CBAM+MR (add) & ResNet34+CBAM+MR (cat) & ResNet34+CBAM+MR (max) & ResNet34+CBAM+MR (rand) & ResNet34+CBAM+MR (alpha) & ResNet34+CBAM+MR (alpha+pos) & ResNet34+CBAM+MR (MLP) & ResNet34+CBAM+MR (CNN) & ResNet34+CBAM+MR+DAL(Channel) & ResNet34+CBAM+MR+DAL(Spatial) & ResNet34+CBAM+MR+DAL(Gated) & ResNet34+CBAM+MR+DAL(Multi) \\
+\midrule
+UNet & 0.862912 & 0.875795 & 0.867067 & 0.865499 & 0.881528 & 0.870246 & 0.854290 & 0.871804 & 0.872525 & 0.866134 & 0.873678 & 0.867073 & 0.407691 \\
+UNet++ & 0.866438 & 0.866016 & 0.877872 & 0.876697 & 0.862262 & 0.858129 & 0.852233 & 0.870667 & 0.874109 & 0.861059 & 0.874028 & 0.865998 & 0.356028 \\
+UNet3p & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+LinkNet & 0.864647 & 0.871388 & 0.867166 & 0.874253 & 0.879294 & 0.866585 & 0.850748 & 0.874232 & 0.868265 & 0.862376 & 0.875558 & 0.871734 & 0.597613 \\
+PSPNet & 0.869008 & 0.870525 & 0.864635 & 0.875452 & 0.861753 & 0.871115 & 0.867325 & 0.865510 & 0.870693 & 0.862981 & 0.875522 & 0.871796 & 0.482315 \\
+FPN & 0.862014 & 0.867220 & 0.874273 & 0.860907 & 0.880613 & 0.868928 & 0.863576 & 0.867436 & 0.868660 & 0.861218 & 0.872458 & 0.875709 & 0.812147 \\
+DeepLabV3+ & 0.864812 & 0.864962 & 0.859795 & 0.869762 & 0.874951 & 0.862586 & 0.856775 & 0.875036 & 0.874133 & 0.850525 & 0.871243 & 0.862962 & 0.460898 \\
+MA-Net & 0.873026 & 0.863072 & 0.863656 & 0.870429 & 0.870483 & 0.867933 & 0.848837 & 0.874415 & 0.874947 & 0.873351 & 0.874486 & 0.874708 & 0.630411 \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: m_iou, step: test}
+\begin{tabular}{llllllllllllll}
+\toprule
+Models & ResNet34+CBAM & ResNet34+CBAM+MR (add) & ResNet34+CBAM+MR (cat) & ResNet34+CBAM+MR (max) & ResNet34+CBAM+MR (rand) & ResNet34+CBAM+MR (alpha) & ResNet34+CBAM+MR (alpha+pos) & ResNet34+CBAM+MR (MLP) & ResNet34+CBAM+MR (CNN) & ResNet34+CBAM+MR+DAL(Channel) & ResNet34+CBAM+MR+DAL(Spatial) & ResNet34+CBAM+MR+DAL(Gated) & ResNet34+CBAM+MR+DAL(Multi) \\
+\midrule
+UNet & 0.797204 & 0.796034 & 0.786605 & 0.793428 & 0.798801 & 0.789382 & 0.794254 & 0.793425 & 0.796822 & 0.792749 & 0.792064 & 0.797515 & 0.714171 \\
+UNet++ & 0.795827 & 0.795040 & 0.797158 & 0.795700 & 0.793201 & 0.797530 & 0.793219 & 0.792908 & 0.793823 & 0.789687 & 0.794141 & 0.794006 & 0.782320 \\
+UNet3p & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+LinkNet & 0.789799 & 0.794590 & 0.790154 & 0.800095 & 0.794537 & 0.787738 & 0.795851 & 0.792626 & 0.793064 & 0.791504 & 0.797371 & 0.800187 & 0.787897 \\
+PSPNet & 0.797392 & 0.800636 & 0.797711 & 0.793446 & 0.798897 & 0.801235 & 0.797445 & 0.797071 & 0.798527 & 0.787109 & 0.796700 & 0.796007 & 0.774836 \\
+FPN & 0.802540 & 0.803117 & 0.795839 & 0.798246 & 0.804261 & 0.801860 & 0.786836 & 0.803314 & 0.800749 & 0.783118 & 0.800928 & 0.801007 & 0.796639 \\
+DeepLabV3+ & 0.795034 & 0.795865 & 0.801541 & 0.804968 & 0.798401 & 0.800139 & 0.786708 & 0.792152 & 0.795866 & 0.775249 & 0.796647 & 0.785549 & 0.757111 \\
+MA-Net & 0.800374 & 0.787297 & 0.797741 & 0.798267 & 0.790820 & 0.799270 & 0.800535 & 0.795989 & 0.793397 & 0.787691 & 0.796301 & 0.800181 & 0.800129 \\
+\bottomrule
+\end{tabular}
+

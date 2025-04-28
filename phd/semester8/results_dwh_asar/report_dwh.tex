@@ -1,0 +1,34 @@
+\documentclass{article}
+
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage[letterpaper, portrait, margin=0.5in]{geometry}
+\usepackage{tikz}
+
+\newcommand{\graphic}[3]{
+\begin{figure}[!ht]
+  \centering
+  \begin{center}
+    \includegraphics[scale=0.35]{figures/#1#2#3.png}
+  \end{center}
+  \caption{#1-#2-#3}\label{fig:#1_#2_#3}
+\end{figure}
+}
+
+\begin{document}
+
+\graphic{2010}{04}{29}
+
+\foreach \d in {02,09,12,15,24,28,31}{
+  \graphic{2010}{05}{\d}
+}
+
+\foreach \d in {03,06,09,13,19,22,25,28}{
+  \graphic{2010}{06}{\d}
+}
+
+\foreach \d in {02,05,08,11,14,18,21,24}{
+  \graphic{2010}{07}{\d}
+}
+
+\end{document}

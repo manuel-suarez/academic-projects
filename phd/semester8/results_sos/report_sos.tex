@@ -1,0 +1,23 @@
+\documentclass{article}
+
+\usepackage{booktabs}
+
+
+\begin{document}
+
+\section{Comparison with SOS Dataset Paper Results}
+
+\subsection{Sentinel-1}
+\begin{tabular}{lllll}
+\toprule
+  Models & mIoU (\%) & F1-score (\%) & Recall (\%) & Precision (\%) \\
+\midrule
+  U-Net     & 81.46 & 86.10 & 81.22 & 85.61 \\
+  D-LinkNet & 82.32 & 87.08 & 85.22 & 85.22 \\
+  Deeplabv3 & 82.94 & 87.70 & 84.76 & 88.08 \\
+  SOS-Paper & 83.42 & 87.87 & 87.32 & 91.20 \\
+\midrule 
+\bottomrule
+\end{tabular}
+
+\end{document}

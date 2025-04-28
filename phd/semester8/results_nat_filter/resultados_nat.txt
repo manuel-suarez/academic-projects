@@ -1,0 +1,189 @@
+Count models:  {'unet': 1, 'unet2p': 1, 'unet3p': 1, 'linknet': 1, 'fpn': 1, 'pspnet': 1, 'manet': 1}
+Validate:  [False, False, False, False, False, False, False]
+Count encoders:  {'resnet': 1, 'resnetmr': 1, 'resnetmrv2_': 1, 'resnetmrv3_': 1, 'resnetmrv4_': 1, 'resnetmrv5_': 1, 'resnetmrv6_': 1, 'resnetmrv7_': 1, 'resnetmrv8_': 1, 'resnetmdv1_': 1, 'resnetmdv2_': 1, 'resnetmdv3_': 1, 'resnetmdv4_': 1}
+Validate:  [False, False, False, False, False, False, False, False, False, False, False, False, False]
+Count layers:  {'34': 1}
+Validate:  [False]
+Namespace(models=['unet', 'unet2p', 'unet3p', 'linknet', 'fpn', 'pspnet', 'manet'], encoders=['resnet', 'resnetmr', 'resnetmrv2_', 'resnetmrv3_', 'resnetmrv4_', 'resnetmrv5_', 'resnetmrv6_', 'resnetmrv7_', 'resnetmrv8_', 'resnetmdv1_', 'resnetmdv2_', 'resnetmdv3_', 'resnetmdv4_'], layers=['34'], epochs=100, metrics=['precision', 'recall', 'f1score', 'm_iou'], steps=['train', 'valid', 'test'], metrics_path='metrics', metrics_file='epoch_metrics.csv', operation_mode='per_model_encoder')
+Metrics path:  metrics
+Metrics file:  epoch_metrics.csv
+\subsubsection{Metric: precision, step: train}
+\begin{tabular}{llllllllllllll}
+\toprule
+Models & ResNet34 & ResNet34+MR (add) & ResNet34+MR (cat) & ResNet34+MR (max) & ResNet34+MR (rand) & ResNet34+MR (alpha) & ResNet34+MR (alpha+pos) & ResNet34+MR (MLP) & ResNet34+MR (CNN) & ResNet34+MR+DAL(Channel) & ResNet34+MR+DAL(Spatial) & ResNet34+MR+DAL(Gated) & ResNet34+MR+DAL(Multi) \\
+\midrule
+UNet & 0.811598 & 0.791245 & 0.826891 & 0.804599 & 0.839469 & 0.812722 & 0.807890 & 0.852236 & 0.754502 & 0.899128 & 0.770363 & 0.873043 & 0.871113 \\
+UNet++ & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+UNet3p & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+LinkNet & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+FPN & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+PSPNet & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+MA-Net & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: precision, step: valid}
+\begin{tabular}{llllllllllllll}
+\toprule
+Models & ResNet34 & ResNet34+MR (add) & ResNet34+MR (cat) & ResNet34+MR (max) & ResNet34+MR (rand) & ResNet34+MR (alpha) & ResNet34+MR (alpha+pos) & ResNet34+MR (MLP) & ResNet34+MR (CNN) & ResNet34+MR+DAL(Channel) & ResNet34+MR+DAL(Spatial) & ResNet34+MR+DAL(Gated) & ResNet34+MR+DAL(Multi) \\
+\midrule
+UNet & 0.929547 & 0.940798 & 0.983777 & 0.982757 & 0.977432 & 0.957106 & 0.983973 & 0.993462 & 0.905602 & 0.980275 & 0.978943 & 0.990436 & 0.379856 \\
+UNet++ & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+UNet3p & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+LinkNet & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+FPN & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+PSPNet & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+MA-Net & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: precision, step: test}
+\begin{tabular}{llllllllllllll}
+\toprule
+Models & ResNet34 & ResNet34+MR (add) & ResNet34+MR (cat) & ResNet34+MR (max) & ResNet34+MR (rand) & ResNet34+MR (alpha) & ResNet34+MR (alpha+pos) & ResNet34+MR (MLP) & ResNet34+MR (CNN) & ResNet34+MR+DAL(Channel) & ResNet34+MR+DAL(Spatial) & ResNet34+MR+DAL(Gated) & ResNet34+MR+DAL(Multi) \\
+\midrule
+UNet & 0.769265 & 0.770599 & 0.836332 & 0.804355 & 0.820878 & 0.770823 & 0.853252 & 0.862434 & 0.531850 & 0.808264 & 0.787324 & 0.829662 & 0.608737 \\
+UNet++ & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+UNet3p & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+LinkNet & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+FPN & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+PSPNet & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+MA-Net & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: recall, step: train}
+\begin{tabular}{llllllllllllll}
+\toprule
+Models & ResNet34 & ResNet34+MR (add) & ResNet34+MR (cat) & ResNet34+MR (max) & ResNet34+MR (rand) & ResNet34+MR (alpha) & ResNet34+MR (alpha+pos) & ResNet34+MR (MLP) & ResNet34+MR (CNN) & ResNet34+MR+DAL(Channel) & ResNet34+MR+DAL(Spatial) & ResNet34+MR+DAL(Gated) & ResNet34+MR+DAL(Multi) \\
+\midrule
+UNet & 0.471921 & 0.393373 & 0.240944 & 0.347186 & 0.288857 & 0.371746 & 0.312331 & 0.333818 & 0.005565 & 0.361134 & 0.307199 & 0.324179 & 0.824966 \\
+UNet++ & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+UNet3p & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+LinkNet & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+FPN & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+PSPNet & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+MA-Net & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: recall, step: valid}
+\begin{tabular}{llllllllllllll}
+\toprule
+Models & ResNet34 & ResNet34+MR (add) & ResNet34+MR (cat) & ResNet34+MR (max) & ResNet34+MR (rand) & ResNet34+MR (alpha) & ResNet34+MR (alpha+pos) & ResNet34+MR (MLP) & ResNet34+MR (CNN) & ResNet34+MR+DAL(Channel) & ResNet34+MR+DAL(Spatial) & ResNet34+MR+DAL(Gated) & ResNet34+MR+DAL(Multi) \\
+\midrule
+UNet & 0.694331 & 0.606653 & 0.355881 & 0.421867 & 0.358246 & 0.552561 & 0.423027 & 0.358289 & 0.006621 & 0.473173 & 0.357262 & 0.314891 & 0.990313 \\
+UNet++ & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+UNet3p & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+LinkNet & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+FPN & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+PSPNet & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+MA-Net & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: recall, step: test}
+\begin{tabular}{llllllllllllll}
+\toprule
+Models & ResNet34 & ResNet34+MR (add) & ResNet34+MR (cat) & ResNet34+MR (max) & ResNet34+MR (rand) & ResNet34+MR (alpha) & ResNet34+MR (alpha+pos) & ResNet34+MR (MLP) & ResNet34+MR (CNN) & ResNet34+MR+DAL(Channel) & ResNet34+MR+DAL(Spatial) & ResNet34+MR+DAL(Gated) & ResNet34+MR+DAL(Multi) \\
+\midrule
+UNet & 0.645306 & 0.588310 & 0.409636 & 0.516754 & 0.438166 & 0.558130 & 0.404116 & 0.464478 & 0.008046 & 0.537383 & 0.488950 & 0.430751 & 0.949163 \\
+UNet++ & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+UNet3p & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+LinkNet & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+FPN & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+PSPNet & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+MA-Net & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: f1score, step: train}
+\begin{tabular}{llllllllllllll}
+\toprule
+Models & ResNet34 & ResNet34+MR (add) & ResNet34+MR (cat) & ResNet34+MR (max) & ResNet34+MR (rand) & ResNet34+MR (alpha) & ResNet34+MR (alpha+pos) & ResNet34+MR (MLP) & ResNet34+MR (CNN) & ResNet34+MR+DAL(Channel) & ResNet34+MR+DAL(Spatial) & ResNet34+MR+DAL(Gated) & ResNet34+MR+DAL(Multi) \\
+\midrule
+UNet & 0.596813 & 0.525493 & 0.373156 & 0.485065 & 0.429817 & 0.510147 & 0.450499 & 0.479728 & 0.011048 & 0.515299 & 0.439241 & 0.472798 & 0.847412 \\
+UNet++ & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+UNet3p & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+LinkNet & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+FPN & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+PSPNet & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+MA-Net & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: f1score, step: valid}
+\begin{tabular}{llllllllllllll}
+\toprule
+Models & ResNet34 & ResNet34+MR (add) & ResNet34+MR (cat) & ResNet34+MR (max) & ResNet34+MR (rand) & ResNet34+MR (alpha) & ResNet34+MR (alpha+pos) & ResNet34+MR (MLP) & ResNet34+MR (CNN) & ResNet34+MR+DAL(Channel) & ResNet34+MR+DAL(Spatial) & ResNet34+MR+DAL(Gated) & ResNet34+MR+DAL(Multi) \\
+\midrule
+UNet & 0.794904 & 0.737649 & 0.522682 & 0.590326 & 0.524319 & 0.700631 & 0.591680 & 0.526645 & 0.013145 & 0.638261 & 0.523481 & 0.477856 & 0.549095 \\
+UNet++ & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+UNet3p & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+LinkNet & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+FPN & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+PSPNet & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+MA-Net & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: f1score, step: test}
+\begin{tabular}{llllllllllllll}
+\toprule
+Models & ResNet34 & ResNet34+MR (add) & ResNet34+MR (cat) & ResNet34+MR (max) & ResNet34+MR (rand) & ResNet34+MR (alpha) & ResNet34+MR (alpha+pos) & ResNet34+MR (MLP) & ResNet34+MR (CNN) & ResNet34+MR+DAL(Channel) & ResNet34+MR+DAL(Spatial) & ResNet34+MR+DAL(Gated) & ResNet34+MR+DAL(Multi) \\
+\midrule
+UNet & 0.701854 & 0.667228 & 0.549921 & 0.629250 & 0.571355 & 0.647456 & 0.548468 & 0.603780 & 0.015851 & 0.645559 & 0.603260 & 0.567080 & 0.741756 \\
+UNet++ & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+UNet3p & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+LinkNet & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+FPN & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+PSPNet & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+MA-Net & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: m_iou, step: train}
+\begin{tabular}{llllllllllllll}
+\toprule
+Models & ResNet34 & ResNet34+MR (add) & ResNet34+MR (cat) & ResNet34+MR (max) & ResNet34+MR (rand) & ResNet34+MR (alpha) & ResNet34+MR (alpha+pos) & ResNet34+MR (MLP) & ResNet34+MR (CNN) & ResNet34+MR+DAL(Channel) & ResNet34+MR+DAL(Spatial) & ResNet34+MR+DAL(Gated) & ResNet34+MR+DAL(Multi) \\
+\midrule
+UNet & 0.599507 & 0.555540 & 0.481915 & 0.534826 & 0.509161 & 0.548863 & 0.517401 & 0.535287 & 0.351088 & 0.557532 & 0.509205 & 0.532885 & 0.807337 \\
+UNet++ & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+UNet3p & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+LinkNet & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+FPN & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+PSPNet & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+MA-Net & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: m_iou, step: valid}
+\begin{tabular}{llllllllllllll}
+\toprule
+Models & ResNet34 & ResNet34+MR (add) & ResNet34+MR (cat) & ResNet34+MR (max) & ResNet34+MR (rand) & ResNet34+MR (alpha) & ResNet34+MR (alpha+pos) & ResNet34+MR (MLP) & ResNet34+MR (CNN) & ResNet34+MR+DAL(Channel) & ResNet34+MR+DAL(Spatial) & ResNet34+MR+DAL(Gated) & ResNet34+MR+DAL(Multi) \\
+\midrule
+UNet & 0.753569 & 0.703654 & 0.556007 & 0.597736 & 0.556645 & 0.674844 & 0.598688 & 0.558822 & 0.339675 & 0.630045 & 0.556231 & 0.530898 & 0.293266 \\
+UNet++ & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+UNet3p & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+LinkNet & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+FPN & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+PSPNet & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+MA-Net & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: m_iou, step: test}
+\begin{tabular}{llllllllllllll}
+\toprule
+Models & ResNet34 & ResNet34+MR (add) & ResNet34+MR (cat) & ResNet34+MR (max) & ResNet34+MR (rand) & ResNet34+MR (alpha) & ResNet34+MR (alpha+pos) & ResNet34+MR (MLP) & ResNet34+MR (CNN) & ResNet34+MR+DAL(Channel) & ResNet34+MR+DAL(Spatial) & ResNet34+MR+DAL(Gated) & ResNet34+MR+DAL(Multi) \\
+\midrule
+UNet & 0.647668 & 0.622289 & 0.553909 & 0.600699 & 0.565349 & 0.608465 & 0.554559 & 0.590039 & 0.330071 & 0.612370 & 0.581472 & 0.563618 & 0.623622 \\
+UNet++ & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+UNet3p & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+LinkNet & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+FPN & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+PSPNet & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+MA-Net & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA & NA \\
+\bottomrule
+\end{tabular}
+
