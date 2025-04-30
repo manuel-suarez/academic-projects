@@ -1,0 +1,60 @@
+This is BibTeX, Version 0.99d (TeX Live 2024/TeX Live for SUSE Linux)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: presentation.aux
+The style file: unsrt.bst
+Database file #1: ref.bib
+Repeated entry---line 247 of file ref.bib
+ : @article{8301576
+ :                 ,  author={Yu, Xingrui and Zhang, He and Luo, Chunbo and Qi, Hairong and Ren, Peng},  journal={IEEE Transactions on Geoscience and Remote Sensing},   title={Oil Spill Segmentation via Adversarial  ff -Divergence Learning},   year={2018},  volume={56},  number={9},  pages={4973-4988},  doi={10.1109/TGRS.2018.2803038}}
+I'm skipping whatever remains of this entry
+Repeated entry---line 249 of file ref.bib
+ : @misc{https://doi.org/10.48550/arxiv.2104.09917
+ :                                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 262 of file ref.bib
+ : @article{rs11151762
+ :                    ,
+I'm skipping whatever remains of this entry
+Warning--empty school in phdthesis
+You've used 22 entries,
+            1791 wiz_defined-function locations,
+            568 strings with 8240 characters,
+and the built_in function-call counts, 4629 in all, are:
+= -- 330
+> -- 351
+< -- 0
++ -- 125
+- -- 103
+* -- 346
+:= -- 832
+add.period$ -- 62
+call.type$ -- 22
+change.case$ -- 21
+chr.to.int$ -- 0
+cite$ -- 23
+duplicate$ -- 170
+empty$ -- 395
+format.name$ -- 103
+if$ -- 972
+int.to.chr$ -- 0
+int.to.str$ -- 22
+missing$ -- 17
+newline$ -- 109
+num.names$ -- 22
+pop$ -- 46
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 84
+stack$ -- 0
+substring$ -- 166
+swap$ -- 22
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 30
+width$ -- 24
+write$ -- 230
+(There were 3 error messages)

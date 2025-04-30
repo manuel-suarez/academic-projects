@@ -1,0 +1,51 @@
+\documentclass[11pt]{beamer}
+\usepackage[spanish]{babel}
+
+\usepackage{multicol}
+\usepackage{tikz}
+
+\mode<presentation> {
+  \usetheme{Madrid}
+}
+
+
+
+\input{config.tex}
+
+\title[CIMAT - UAM I]
+{Análisis Multiresolución y Aprendizaje Profundo para la Detección de Derrames de Petróleo en Imágenes de Radar}
+
+\author[Suárez, Arturo]{Manuel Arturo Suárez Améndola}
+
+\begin{document}
+\input{files/pre-slides.tex}
+
+\section{Antecedentes}
+\input{files/section_01}
+
+\section{Percepción Remota}
+\input{files/section_03}
+
+\section{Detección de Derrames de Petróleo}
+\input{files/section_02}
+
+\section{Bases de Datos}
+\input{files/section_04}
+
+\section{Redes Profundas para Segmentación}
+\input{files/section_05}
+
+%\section{Resultados Comparativos}
+%\input{files/section_06}
+
+\section{Trabajo actual}
+\input{files/section_07}
+
+%%%%%%%% referencias %%%%%%%%
+\nocite{*}
+\begin{frame}[allowframebreaks]{Referencias}
+\bibliographystyle{unsrt}
+\bibliography{ref.bib}
+\end{frame}
+
+\end{document}

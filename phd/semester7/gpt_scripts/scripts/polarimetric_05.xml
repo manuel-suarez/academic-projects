@@ -1,0 +1,14 @@
+<graph id="Graph">
+  <version>1.0</version>
+  <node id="TOPSAR-Merge">
+    <operator>TOPSAR-Merge</operator>
+    <sources>
+      <sourceProduct>${source1}</sourceProduct>
+      <sourceProduct.1>${source2}</sourceProduct.1>
+      <sourceProduct.2>${source3}</sourceProduct.2>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <selectedPolarisations/>
+    </parameters>
+  </node>
+</graph>

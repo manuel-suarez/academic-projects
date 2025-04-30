@@ -1,0 +1,134 @@
+\begin{thebibliography}{10}
+
+\bibitem{phdthesis}
+Beatriz Valdés-Moreno.
+\newblock {\em Identificación de lineamientos y minerales asociados a
+  alteraciones hidrotermales en la Bahía de la Paz, Baja California Sur,
+  México, mediante imágenes satelitales Landsat ETM}.
+\newblock PhD thesis, 02 2015.
+
+\bibitem{rs12203338}
+Rami Al-Ruzouq, Mohamed Barakat~A. Gibril, Abdallah Shanableh, Abubakir Kais,
+  Osman Hamed, Saeed Al-Mansoori, and Mohamad~Ali Khalil.
+\newblock Sensors, features, and machine learning for oil spill detection and
+  monitoring: A review.
+\newblock {\em Remote Sensing}, 12(20), 2020.
+
+\bibitem{rs11151762}
+Marios Krestenitis, Georgios Orfanidis, Konstantinos Ioannidis, Konstantinos
+  Avgerinakis, Stefanos Vrochidis, and Ioannis Kompatsiaris.
+\newblock Oil spill identification from satellite images using deep neural
+  networks.
+\newblock {\em Remote Sensing}, 11(15), 2019.
+
+\bibitem{9568691}
+Qiqi Zhu, Yanan Zhang, Ziqi Li, Xiaorui Yan, Qingfeng Guan, Yanfei Zhong,
+  Liangpei Zhang, and Deren Li.
+\newblock Oil spill contextual and boundary-supervised detection network based
+  on marine sar images.
+\newblock {\em IEEE Transactions on Geoscience and Remote Sensing}, 60:1--10,
+  2022.
+
+\bibitem{Zhu2021AGC}
+Qiqi Zhu, Yanan Zhang, Lizeng Wang, Yanfei Zhong, Qingfeng Guan, Xiaoyan Lu,
+  Liang pei Zhang, and Deren Li.
+\newblock A global context-aware and batch-independent network for road
+  extraction from vhr satellite imagery.
+\newblock {\em Isprs Journal of Photogrammetry and Remote Sensing},
+  175:353--365, 2021.
+
+\bibitem{DBLP:journals/corr/RonnebergerFB15}
+Olaf Ronneberger, Philipp Fischer, and Thomas Brox.
+\newblock U-net: Convolutional networks for biomedical image segmentation.
+\newblock {\em CoRR}, abs/1505.04597, 2015.
+
+\bibitem{DBLP:journals/corr/LinDGHHB16}
+Tsung{-}Yi Lin, Piotr Doll{\'{a}}r, Ross~B. Girshick, Kaiming He, Bharath
+  Hariharan, and Serge~J. Belongie.
+\newblock Feature pyramid networks for object detection.
+\newblock {\em CoRR}, abs/1612.03144, 2016.
+
+\bibitem{DBLP:journals/corr/ChaurasiaC17}
+Abhishek Chaurasia and Eugenio Culurciello.
+\newblock Linknet: Exploiting encoder representations for efficient semantic
+  segmentation.
+\newblock {\em CoRR}, abs/1707.03718, 2017.
+
+\bibitem{jha2008advances}
+Maya~Nand Jha, Jason Levy, and Yang Gao.
+\newblock Advances in remote sensing for oil spill disaster management:
+  State-of-the-art sensors technology for oil spill surveillance.
+\newblock {\em Sensors}, 8(1):236--255, 2008.
+
+\bibitem{article}
+Polychronis Kolokoussis and Vassilia Karathanassi.
+\newblock Detection of oil spills and underwater natural oil outflow using
+  multispectral satellite imagery.
+\newblock {\em International Journal of Remote Sensing Applications},
+  3:145--154, 09 2013.
+
+\bibitem{https://doi.org/10.48550/arxiv.1608.03983}
+Ilya Loshchilov and Frank Hutter.
+\newblock Sgdr: Stochastic gradient descent with warm restarts, 2016.
+
+\bibitem{https://doi.org/10.48550/arxiv.2104.09917}
+ZengShun Zhaoa, Yulong Wang, Ke~Liu, Haoran Yang, Qian Sun, and Heng Qiao.
+\newblock Semantic segmentation by improved generative adversarial networks,
+  2021.
+
+\bibitem{PascalVOC2010}
+Mark Everingham, Luc Van~Gool, Christopher K.~I. Williams, John Winn, and
+  Andrew Zisserman.
+\newblock The pascal visual object classes (voc) challenge.
+\newblock {\em International Journal of Computer Vision}, 88(2):303--338, 2010.
+
+\bibitem{8301576}
+Xingrui Yu, He~Zhang, Chunbo Luo, Hairong Qi, and Peng Ren.
+\newblock Oil spill segmentation via adversarial ff -divergence learning.
+\newblock {\em IEEE Transactions on Geoscience and Remote Sensing},
+  56(9):4973--4988, 2018.
+
+\bibitem{DBLP:journals/corr/abs-1807-10165}
+Zongwei Zhou, Md~Mahfuzur~Rahman Siddiquee, Nima Tajbakhsh, and Jianming Liang.
+\newblock Unet++: {A} nested u-net architecture for medical image segmentation.
+\newblock {\em CoRR}, abs/1807.10165, 2018.
+
+\bibitem{DBLP:journals/corr/ZhaoSQWJ16}
+Hengshuang Zhao, Jianping Shi, Xiaojuan Qi, Xiaogang Wang, and Jiaya Jia.
+\newblock Pyramid scene parsing network.
+\newblock {\em CoRR}, abs/1612.01105, 2016.
+
+\bibitem{9201310}
+Tongle Fan, Guanglei Wang, Yan Li, and Hongrui Wang.
+\newblock Ma-net: A multi-scale attention network for liver and tumor
+  segmentation.
+\newblock {\em IEEE Access}, 8:179656--179665, 2020.
+
+\bibitem{DBLP:journals/corr/abs-2111-07624}
+Meng{-}Hao Guo, Tian{-}Xing Xu, Jiang{-}Jiang Liu, Zheng{-}Ning Liu, Peng{-}Tao
+  Jiang, Tai{-}Jiang Mu, Song{-}Hai Zhang, Ralph~R. Martin, Ming{-}Ming Cheng,
+  and Shi{-}Min Hu.
+\newblock Attention mechanisms in computer vision: {A} survey.
+\newblock {\em CoRR}, abs/2111.07624, 2021.
+
+\bibitem{bahdanau2016neural}
+Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio.
+\newblock Neural machine translation by jointly learning to align and
+  translate, 2016.
+
+\bibitem{Alammar}
+Jay Alammar.
+\newblock The illustrated transformer.
+
+\bibitem{DBLP:journals/corr/VaswaniSPUJGKP17}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+  Aidan~N. Gomez, Lukasz Kaiser, and Illia Polosukhin.
+\newblock Attention is all you need.
+\newblock {\em CoRR}, abs/1706.03762, 2017.
+
+\bibitem{DBLP:journals/corr/abs-1805-10180}
+Hanchao Li, Pengfei Xiong, Jie An, and Lingxue Wang.
+\newblock Pyramid attention network for semantic segmentation.
+\newblock {\em CoRR}, abs/1805.10180, 2018.
+
+\end{thebibliography}

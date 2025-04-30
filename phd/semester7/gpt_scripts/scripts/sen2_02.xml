@@ -1,0 +1,12 @@
+<graph id="Sentinel2_L2A_Export">
+  <version>1.0</version>
+  <node id="Resample">
+    <operator>Resample</operator>
+    <sources>
+      <sourceProduct>${sourceProduct}</sourceProduct>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <referenceBand>B4</referenceBand>
+    </parameters>
+  </node>
+</graph>

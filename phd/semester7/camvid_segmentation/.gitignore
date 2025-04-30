@@ -1,0 +1,7 @@
+data
+figures
+results
+*.h5
+*.log
+*.slurm
+*.out

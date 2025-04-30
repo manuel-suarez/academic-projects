@@ -1,0 +1,13 @@
+<graph id="Sentinel2_L2A_Export">
+  <version>1.0</version>
+  <node id="Resample">
+    <operator>Resample</operator>
+    <sources>
+      <sourceProduct>${sourceProduct}</sourceProduct>
+    </sources>
+    <parameters>
+      <!-- Ensures all bands match B4 resolution (10 mts)--!>
+      <referenceBand>B4</referenceBand>
+    </parameters>
+  </node>
+</graph>

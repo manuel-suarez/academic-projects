@@ -1,0 +1,12 @@
+<graph id="Sentinel2_L2A_Export">
+  <version>1.0</version>
+  <node id="Subset">
+    <operator>Subset</operator>
+    <sources>
+      <sourceProduct>${sourceProduct}</sourceProduct>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <sourceBands>${bands}</sourceBands>
+    </parameters>
+  </node>
+</graph>

@@ -1,0 +1,432 @@
+\begin{frame}
+\frametitle{Resultados de la Segmentación en Oil Spill Dataset}
+
+\begin{itemize}
+    \item UNet (30 épocas)
+\end{itemize}    
+    \begin{table}[]
+        \centering
+        \small
+        \begin{tabular}{l|c|c|c}
+            \hline
+            Backbone        & Loss    & IoU     & F1 \\
+            \hline
+            VGG16           & 0.45566 & 0.50114 & 0.40113 \\
+            VGG19           & 0.44587 & 0.40173 & 0.50689 \\
+            ResNet18        & 0.43212 & 0.41164 & 0.51881 \\
+            ResNext50       & 0.40226 & 0.44552 & 0.54420 \\ 
+            InceptionV3     & \textbf{0.37950} & \textbf{0.46721} & \textbf{0.56968} \\
+            DenseNet121     & 0.38590 & 0.45168 & 0.55749 \\
+            SEResNet18      & 0.43127 & 0.42239 & 0.52734 \\
+            MobileNet       & 0.39336 & 0.44545 & 0.54890 \\ 
+            MobileNet V2    & 0.51077 & 0.35173 & 0.46304 \\
+            EfficientNetB0  & 0.38767 & 0.44784 & 0.55184 \\
+            EfficientNetB1  & 0.38988 & 0.45152 & 0.55382 \\
+            \hline
+        \end{tabular}
+        \caption{Resultados del entrenamiento con UNet}
+        \label{tab:my_label}
+    \end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Resultados de la segmentación - Oil Spill Dataset}
+\begin{itemize}
+    \item UNet (InceptionV3)
+\end{itemize}    
+\begin{figure}
+    \centering
+    \begin{tabular}{cc}
+         \includegraphics[scale=0.15]{img/section_06/unet_inceptionv3_resultado_01.png}&&
+         \includegraphics[scale=0.15]{img/section_06/unet_inceptionv3_resultado_02.png}\\
+         \includegraphics[scale=0.12]{img/section_06/unet_inceptionv3_training_results.png}
+    \end{tabular}
+    \caption{Resultados de la segmentación UNet (30 épocas)}
+    \label{fig:my_label}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Resultados de la Segmentación en Oil Spill Dataset}
+
+\begin{itemize}
+    \item UNet (50 épocas)
+\end{itemize}    
+    \begin{table}[]
+        \centering
+        \small
+        \begin{tabular}{l|c|c|c}
+            \hline
+            Backbone        & Loss    & IoU     & F1 \\
+            \hline
+            VGG16           & 0.38731 & 0.44790 & 0.54889 \\
+            VGG19           & 0.40118 & 0.43932 & 0.53753 \\
+            ResNet18        & 0.36104 & 0.46592 & 0.56925 \\
+            ResNext50       & \textbf{0.35660} & 0.47251 & \textbf{0.57368} \\ 
+            InceptionV3     & 0.36673 & 0.46643 & 0.56779 \\
+            DenseNet121     & 0.37890 & 0.45305 & 0.55465 \\
+            SEResNet18      & 0.39182 & 0.44560 & 0.54850 \\
+            MobileNet       & 0.37857 & 0.45648 & 0.55577 \\ 
+            MobileNet V2    & 0.37603 & 0.45685 & 0.55593 \\
+            EfficientNetB0  & 0.36888 & 0.45906 & 0.56276 \\
+            EfficientNetB1  & 0.37087 & 0.45949 & 0.56217 \\
+            EfficientNetB3  & 0.36485 & 0.46378 & 0.56617 \\
+            EfficientNetB3  & 0.35709 & \textbf{0.47356} & 0.57298 \\
+            \hline
+        \end{tabular}
+        \caption{Resultados del entrenamiento con UNet}
+        \label{tab:my_label}
+    \end{table}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Resultados de la segmentación - Oil Spill Dataset}
+\begin{itemize}
+    \item UNet(EfficientNetB3)
+\end{itemize}    
+
+\begin{figure}
+    \centering
+    \begin{tabular}{cc}
+         \includegraphics[scale=0.15]{img/section_06/unet50/efficientnetb3_resultado77.png}&&
+         \includegraphics[scale=0.15]{img/section_06/unet50/efficientnetb3_resultado98.png}\\
+         \includegraphics[scale=0.12]{img/section_06/unet50/efficientnetb3_training_results.png}
+    \end{tabular}
+    \caption{Resultados de la segmentación UNet (50 épocas)}
+    \label{fig:my_label}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Resultados de la Segmentación en Oil Spill Dataset}
+
+\begin{itemize}
+    \item LinkNet (30 épocas)
+\end{itemize}
+    \begin{table}[]
+        \centering
+        \small
+        \begin{tabular}{l|c|c|c}
+            \hline
+            Backbone        & Loss    & IoU     & F1 \\
+            \hline
+            VGG16           & 0.51160 & 0.35445 & 0.46811 \\
+            VGG19           & 0.50209 & 0.35656 & 0.46109 \\
+            ResNet18        & 0.42136 & 0.41926 & 0.52544 \\
+            ResNext50       & 0.43413 & 0.41151 & 0.52428 \\ 
+            InceptionV3     & 0.41608 & 0.42870 & 0.52965 \\
+            DenseNet121     & 0.41567 & 0.43012 & 0.53101 \\
+            SEResNet18      & 0.45467 & 0.39704 & 0.50374 \\
+            MobileNet       & 0.42681 & 0.43919 & 0.54153 \\ 
+            MobileNet V2    & 0.41577 & 0.43314 & 0.53733 \\
+            EfficientNetB0  & 0.40657 & 0.43324 & 0.53863 \\
+            EfficientNetB1  & \textbf{0.39538} & \textbf{0.44272} & \textbf{0.54845} \\
+            \hline
+        \end{tabular}
+        \caption{Resultados del entrenamiento con LinkNet}
+        \label{tab:my_label}
+    \end{table}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Resultados de la segmentación - Oil Spill Dataset}
+\begin{itemize}
+    \item LinkNet(EfficientNetB1)
+\end{itemize}
+
+\begin{figure}
+    \centering
+    \begin{tabular}{cc}
+         \includegraphics[scale=0.15]{img/section_06/linknet_efficientnetb1_resultado_01.png}&&
+         \includegraphics[scale=0.15]{img/section_06/linknet_efficientnetb1_resultado_02.png}\\
+         \includegraphics[scale=0.12]{img/section_06/linknet_efficientnetb1_training_results.png}
+    \end{tabular}
+    \caption{Resultados de la segmentación LinkNet (30 épocas)}
+    \label{fig:my_label}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Resultados de la Segmentación en Oil Spill Dataset}
+
+\begin{itemize}
+    \item LinkNet (50 épocas)
+\end{itemize}
+    \begin{table}[]
+        \centering
+        \small
+        \begin{tabular}{l|c|c|c}
+            \hline
+            Backbone        & Loss    & IoU     & F1 \\
+            \hline
+            VGG16           & 0.40791 & 0.43255 & 0.53222 \\
+            VGG19           & 0.39859 & 0.43914 & 0.54251 \\
+            ResNet18        & 0.38332 & 0.44659 & 0.55128 \\
+            ResNext50       & 0.36718 & 0.46303 & 0.56414 \\ 
+            InceptionV3     & 0.36917 & 0.46123 & 0.56375 \\
+            DenseNet121     & 0.39278 & 0.44348 & 0.54520 \\
+            SEResNet18      & 0.40440 & 0.42711 & 0.53362 \\
+            MobileNet       & 0.37634 & 0.45620 & 0.55743 \\ 
+            MobileNet V2    & 0.38189 & 0.44708 & 0.55195 \\
+            EfficientNetB0  & 0.37580 & 0.45786 & 0.56070 \\
+            EfficientNetB1  & 0.36264 & \textbf{0.46611} & 0.56750 \\
+            EfficientNetB2  & \textbf{0.35914} & 0.46599 & \textbf{0.56928} \\
+            EfficientNetB1  & 0.37813 & 0.45397 & 0.55441 \\
+            \hline
+        \end{tabular}
+        \caption{Resultados del entrenamiento con LinkNet}
+        \label{tab:my_label}
+    \end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Resultados de la segmentación - Oil Spill Dataset}
+\begin{itemize}
+    \item LinkNet(EfficientNetB1)
+\end{itemize}
+\begin{figure}
+    \centering
+    \begin{tabular}{cc}
+         \includegraphics[scale=0.15]{img/section_06/linknet50/efficientnetb3_resultado103.png}&&
+         \includegraphics[scale=0.15]{img/section_06/linknet50/efficientnetb3_resultado37.png}\\
+         \includegraphics[scale=0.12]{img/section_06/linknet50/efficientnetb3_training_results.png}
+    \end{tabular}
+    \caption{Resultados de la segmentación LinkNet (50 épocas)}
+    \label{fig:my_label}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Resultados de la Segmentación en Oil Spill Dataset}
+
+\begin{itemize}
+    \item FPN (30 épocas)
+\end{itemize}
+    
+    \begin{table}[]
+        \centering
+        \small
+        \begin{tabular}{l|c|c|c}
+            \hline
+            Backbone        & Loss    & IoU     & F1 \\
+            \hline
+            VGG16           & 0.38663 & 0.44950 & 0.55168 \\
+            VGG19           & 0.39642 & 0.43647 & 0.54282 \\
+            ResNet18        & 0.39412 & 0.43772 & 0.54311 \\
+            ResNext50       & 0.39544 & 0.43457 & 0.54063 \\ 
+            InceptionV3     & 0.38186 & 0.45064 & 0.55056 \\
+            DenseNet121     & 0.40649 & 0.43112 & 0.53142 \\
+            SEResNet18      & 0.39456 & 0.43615 & 0.54126 \\
+            MobileNet       & 0.37814 & 0.45306 & 0.55631 \\ 
+            MobileNet V2    & 0.39249 & 0.44255 & 0.54807 \\
+            EfficientNetB0  & \textbf{0.37707} & \textbf{0.45358} & 0.55442 \\
+            EfficientNetB1  & 0.38023 & 0.45093 & \textbf{0.55456} \\
+            \hline
+        \end{tabular}
+        \caption{Resultados del entrenamiento con FPN}
+        \label{tab:my_label}
+    \end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Resultados de la segmentación - Oil Spill Dataset}
+\begin{itemize}
+    \item FPN(EfficientNetB0,B1)
+\end{itemize}
+
+\begin{figure}
+    \centering
+    \begin{tabular}{cc}
+         \includegraphics[scale=0.15]{img/section_06/fpn_efficientnetb0_resultado_01.png}&&
+         \includegraphics[scale=0.15]{img/section_06/fpn_efficientnetb1_resultado_02.png}\\
+         \includegraphics[scale=0.12]{img/section_06/fpn_efficientnetb1_training_results.png}
+    \end{tabular}
+    \caption{Resultados de la segmentación FPN (30 épocas)}
+    \label{fig:my_label}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Resultados de la Segmentación en Oil Spill Dataset}
+\begin{itemize}
+    \item FPN (50 épocas)
+\end{itemize}
+    \begin{table}[]
+        \centering
+        \small
+        \begin{tabular}{l|c|c|c}
+            \hline
+            Backbone        & Loss    & IoU     & F1 \\
+            \hline
+            VGG16           & 0.38189 & 0.44954 & 0.55027 \\
+            VGG19           & 0.37653 & 0.45591 & 0.55571 \\
+            ResNet18        & 0.39561 & 0.44309 & 0.54304 \\
+            ResNext50       & 0.36392 & 0.46511 & 0.56499 \\ 
+            InceptionV3     & 0.39995 & 0.43918 & 0.53494 \\
+            DenseNet121     & 0.37311 & 0.45484 & 0.55666 \\
+            SEResNet18      & 0.38922 & 0.44315 & 0.54345 \\
+            MobileNet       & 0.37649 & 0.45590 & 0.55584 \\ 
+            MobileNet V2    & 0.37500 & 0.45930 & 0.56106 \\
+            EfficientNetB0  & 0.36161 & 0.46685 & 0.56791 \\
+            EfficientNetB1  & \textbf{0.34946} & \textbf{0.47850} & \textbf{0.57835} \\
+            EfficientNetB2  & 0.35209 & 0.47497 & 0.57533 \\
+            EfficientNetB3  & 0.37618 & 0.45351 & 0.55577 \\
+            \hline
+        \end{tabular}
+        \caption{Resultados del entrenamiento con FPN}
+        \label{tab:my_label}
+    \end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Resultados de la segmentación - Oil Spill Dataset}
+\begin{itemize}
+    \item FPN(EfficientNetB1)
+\end{itemize}
+\begin{figure}
+    \centering
+    \begin{tabular}{cc}
+         \includegraphics[scale=0.15]{img/section_06/fpn50/efficientnetb1_resultado73.png}&&
+         \includegraphics[scale=0.15]{img/section_06/fpn50/efficientnetb1_resultado79.png}\\
+         \includegraphics[scale=0.12]{img/section_06/fpn50/efficientnetb1_training_results.png}
+    \end{tabular}
+    \caption{Resultados de la segmentación FPN (50 épocas)}
+    \label{fig:my_label}
+\end{figure}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Resultados obtenidos (v2.0)}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|l|c|c|c|}
+        \hline
+        Arquitectura & Train IoU & Valid IoU & Test IoU \\
+         \hline
+        U-net & 0.953881502 & 0.829308152 & 0.810642958 \\
+        UNet++ & 0.957234263 & 0.827012777 & 0.81362468 \\
+        FPN & 0.958307505 & 0.825693786 & 0.81834054 \\
+        LinkNet & 0.910990953 & 0.809995234 & 0.817955494 \\
+        PSP & 0.952400804 & 0.784086466 & 0.784680903 \\
+        PAN & 0.95680362 & 0.833234131 & 0.822393894 \\
+        MANet & 0.954820871 & 0.820060194 & 0.814887702 \\
+        \hline
+    \end{tabular}
+    \caption{Resultados Per Image}
+    \label{tab:resultados_per_image}
+\end{table}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|l|c|c|c|}
+        \hline
+        Arquitectura & Train IoU & Valid IoU & Test IoU \\
+         \hline
+        U-net & 0.925344884 & 0.425292462 & 0.362593859 \\
+        UNet++ & 0.924023926 & 0.434665382 & 0.375736356 \\
+        FPN & 0.919602633 & 0.421498924 & 0.394982636 \\
+        LinkNet & 0.799012482 & 0.392058462 & 0.379849225 \\
+        PSP & 0.908014834 & 0.394087285 & 0.33700341 \\
+        PAN & 0.913587391 & 0.438524336 & 0.392617226 \\
+        MANet & 0.911941469 & 0.430485725 & 0.406906128 \\
+        \hline
+    \end{tabular}
+    \caption{Resultados Dataset}
+    \label{tab:resultados_dataset}
+\end{table}
+\end{frame}
+
+\begin{frame}{Dataset CIMAT}
+    \tiny
+    Linknet
+    \centering
+    \begin{tabular}{c|c|c|c|c}
+         \hline        train accuracy&cross val accuracy&train loss&cross val loss&time\\
+         \hline
+0.9135&0.2292&0.2084&20.5706&0:15:25.9513  \\
+0.9321&0.7309&0.1613&4.5319&0:08:14.0341  \\
+0.9413&0.8682&0.1408&0.2849&0:07:53.0278  \\
+0.9447&0.7840&0.1334&0.4378&0:07:34.2589  \\
+0.9498&0.7721&0.1211&0.5060&0:07:41.0982  \\
+0.9522&0.8335&0.1163&0.4812&0:07:54.5108  \\
+0.9529&0.7936&0.1127&0.6172&0:07:37.0849  \\
+0.9550&0.9173&0.1081&0.2430&0:07:41.8006  \\
+0.9559&0.8718&0.1057&0.4472&0:07:38.0394  \\
+0.9582&0.8431&0.1014&0.3682&0:07:37.8231  \\
+0.9641&0.9478&0.0862&0.1308&0:07:39.1014  \\
+0.9659&0.8145&0.0824&0.9081&0:07:40.1780  \\
+0.9672&0.9262&0.0783&0.2671&0:07:59.4524  \\
+0.9692&0.8943&0.0745&0.2832&0:08:12.5293  \\
+0.9703&0.9489&0.0722&0.1341&0:08:00.8487  \\
+0.9717&0.9359&0.0683&0.1597&0:07:56.9729  \\
+0.9718&0.9362&0.0679&0.1630&0:07:55.0680  \\
+0.9731&0.9241&0.0652&0.2339&0:08:09.4719  \\
+0.9749&0.9226&0.0609&0.2082&0:07:51.4603  \\
+0.9753&0.9173&0.0601&0.2194&0:07:51.9716  \\
+    \hline
+    \end{tabular}
+\end{frame}
+
+\begin{frame}{Dataset CIMAT}
+    \tiny
+    FPN
+    \centering
+    \begin{tabular}{c|c|c|c|c}
+         \hline        train accuracy&cross val accuracy&train loss&cross val loss&time\\
+         \hline
+0.9165&0.3551&0.1959&1.3169&0:25:44.8352\\
+0.9366&0.9120&0.1484&1.0141&0:25:21.0023\\
+0.9443&0.7229&0.1331&0.7193&0:26:21.7031\\
+0.9475&0.8190&0.1252&0.3640&0:25:38.0897\\
+0.9503&0.7986&0.1196&0.8158&0:22:57.3958\\
+0.9536&0.8073&0.1095&0.3852&0:22:17.9054\\
+0.9557&0.9390&0.1061&0.1657&0:22:17.2939\\
+0.9578&0.8955&0.1007&0.3413&0:23:30.5936\\
+0.9598&0.9196&0.0968&0.1922&0:23:10.0042\\
+0.9617&0.7772&0.0919&0.5507&0:22:56.4491\\
+0.9686&0.9262&0.0752&0.1777&0:22:02.3274\\
+0.9702&0.8144&0.0716&0.4685&0:22:35.3553\\
+0.9710&0.9467&0.0702&0.1392&0:22:01.0859\\
+0.9730&0.9246&0.0654&0.1819&0:22:46.4153\\
+0.9743&0.9525&0.0622&0.1149&0:22:38.2599\\
+0.9745&0.9491&0.0622&0.1321&0:22:08.8205\\
+0.9765&0.8694&0.0575&0.4003&0:22:13.8110\\
+0.9765&0.9356&0.0574&0.1699&0:22:26.7005\\
+0.9787&0.9536&0.0518&0.1204&0:22:51.8932\\
+0.9788&0.9442&0.0514&0.1805&0:22:26.3315\\
+    \hline
+    \end{tabular}
+\end{frame}
+
+\begin{frame}{Dataset CIMAT}
+    \tiny
+    Unet
+    \centering
+    \begin{tabular}{c|c|c|c|c}
+         \hline        train accuracy&cross val accuracy&train loss&cross val loss&time\\
+         \hline
+0.9101&0.4451&0.2129&0.9967&0:12:56.3800\\
+0.9325&0.8417&0.1623&0.3851&0:07:40.2358\\
+0.9406&0.9341&0.1430&0.1676&0:08:16.7219\\
+0.9444&0.8946&0.1328&0.2260&0:08:17.0713\\
+0.9482&0.8929&0.1242&0.2676&0:08:38.0430\\
+0.9485&0.8501&0.1232&0.4255&0:08:24.9761\\
+0.9520&0.9087&0.1161&0.2259&0:08:39.0020\\
+0.9553&0.8190&0.1076&0.5862&0:08:30.0524\\
+0.9563&0.6377&0.1042&11.2629&0:08:45.2755\\
+0.9568&0.9530&0.1035&0.1101&0:08:37.9279\\
+0.9642&0.9583&0.0861&0.1000&0:09:02.1637\\
+0.9665&0.9015&0.0813&0.2152&0:08:46.9740\\
+0.9673&0.9459&0.0790&0.1331&0:08:40.7595\\
+0.9690&0.8902&0.0743&0.3482&0:08:52.2270\\
+0.9700&0.8937&0.0722&0.2625&0:08:38.5683\\
+0.9713&0.9369&0.0696&0.1645&0:08:41.7734\\
+0.9720&0.9055&0.0679&0.2149&0:08:51.5161\\
+0.9733&0.9131&0.0649&0.2414&0:08:47.8855\\
+0.9739&0.9447&0.0637&0.1410&0:08:42.8911\\
+0.9753&0.8692&0.0603&0.3389&0:08:53.1651\\
+\hline
+    \end{tabular}
+\end{frame}

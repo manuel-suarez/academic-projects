@@ -1,0 +1,27 @@
+1.- Actualizar antecedentes con el reporte de CIGOM
+1.1.- Consecuencias ambientales, económicas, sociales - OK
+1.2.- Diapositiva de pozos perforados, actualizar con reporte de CIGOM - OK
+1.3.- Deep Water Horizon, agregar datos como extensión del derrame, fechas, causas, pérdidas económicas - OK
+1.4.- Dinámica de la interacción océano-petróleo, agregar lista con los diferentes procesos químicos que pueden ocurrir y como afecta al proceso de detección del petroleo
+2.- Actualizar estado del arte con artículos con nuevas metodologías
+2.1.- Revisión del estado del arte con metodologías
+2.2.- Agregar tablas faltantes del artículo (satellites, features)
+2.3.- Revisar diseño de pipeline de acuerdo a características (optical, sar)
+2.4.- Revisar diapositiva de arquitecturas de CNN (quizá convenga hablar de forma general sobre el problema de segmentación semántica, diseñar imagen propia)
+3.- Corregir diapositivas sobre percepción remota, buscar mas fuentes
+3.1.- Definición de percepción remota, agregar gráfico
+3.2.- Tipos de sensores, agregar ejemplo de imagen en cada caso y hablar sobre los problemas que cada uno de ellos presenta
+3.3.- Espectro electromagnético, hablar sobre las bandas que se usan en los diferentes sensores multiespectrales, de radar e hiperespectrales
+3.4.- Resolución, agregar imágenes para ejemplificar la diferencia en cada caso
+3.5.- SAR e interacción con el derrame, mostrar ejemplos de imágenes SAR y su conformación, es decir el principio físico bajo el cuál se orienta la construcción de las imágenes y como esto afecta a la construcción de las imágenes del satélite, hablar de look alikes y mostrar ejemplos
+3.6.- Hablar sobre features.- polarimétricos, de textura, geométricos y estadísticos
+4.- Dataset, ampliar datasets a otros problemas, hablar de generalidades, mados, spacenet, noisy labels, road segmentation
+5.- Arquitecturas de redes profundas, poner ejemplos de las que he utilizado y las que estoy utilizando, UNet, UNet++, UNet3p, DeepLabV3+, FPN, MAnet, poner especial énfasis en los modelos de atención y multiresolución
+5.1.- Hablar sobre la transformada wavelet y su capacidad de análisis a diferentes resoluciones, hablar sobre la integración en redes neuronales, hacer una prueba rápidad con un encoder que solo use wavelets
+5.2.- Resultados de segmentación
+5.3.- Mostrar resultados de segmentación con modelos entrenados sobre la base de datos de Krestenitis, SOS, CHN6-CUG, Noisy Labels
+5.4.- Retos y trabajo a futuro
+5.4.1.- Nueva base de datos, agregar features
+5.4.2.- Arquitecturas de atención y funciones de costo
+5.4.3.- Noisy labels y restricted learning
+5.4.4.- Arquitecturas dinámicas de redes

@@ -1,0 +1,234 @@
+\documentclass[10pt]{beamer}
+\usetheme{Frankfurt}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+% Title page settings
+\title{Introduction to Remote Sensing}
+\subtitle{Applications in Disaster Management}
+\author{Manuel Arturo Suárez Améndola}
+\date{\today}
+
+\begin{document}
+
+% Title slide
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% Table of Contents
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+% Section 1: Introduction
+\section{Introduction to Remote Sensing}
+\begin{frame}{What is remote sensing}
+  \begin{block}{Remote Sensing}
+    Remote sensing is the process of detecting and monitoring the physical characteristics of an area
+    by measuring its reflected and emitted radiation at a distance.
+  \end{block}
+    \begin{itemize}
+        \item Cameras on satellites and airplanes take images of large areas on the Earth's surface.
+        \item Sonar systems on ships can be used to create images of the ocrean floor without needing to travel to the bottom of the ocean.
+        \item Cameras on satellites can be used to make images of temperature changes in the oceans.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{What is it used for?}
+  Some specific users of remotely sensed images of the Earth includes:
+
+  \begin{itemize}
+    \item Large forest fires can be mapped from space, allowing rangers to ses a much larger area than from the ground
+    \item Tracking clouds to help predict the weather or watching erupting volcanoes, and help watching for dust storms
+    \item Tracking the growth of a city and changes in farmland or forests over several years or decades
+    \item Discovery and mapping of the rugged topograhpy of the ocean floor
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Components of Remote Sensing}
+  Though the methods for collection, processing, and interpretation of remotely sensed data are very diverse, 
+  imaging systems have the following essential components:
+
+  \begin{itemize}
+    \item Energy Source or Illumination
+    \item Interaction with the target
+    \item Recording of Energy by the Sensor
+    \item Transmission, reception and processing
+    \item Interpretation and Analysis
+  \end{itemize}
+\end{frame}
+
+\subsection{Components of Remote Sensing}
+\begin{frame}{Energy Source}
+  The first requirement for remote sensing is to have an energy source, which illuminates or provides
+  electromagnetic energy to the target of interest
+
+  Sensors can be classified as passive or active, based on the energy source they are using
+
+  Sensors, which sense natural radiations, either emitted or reflected from the Earth, are called passive sensor. Most of the remote sensing sensors are passive in nature, which measure the solar radiation reflected from the target
+
+  On the other hand, the sensors which produce their own electromagnetic radiation, are called active sensors (e.g. LIDAR, RADAR)
+\end{frame}
+
+\begin{frame}{Interaction with the target}
+  As the energy travels from its source to the target, it will come in contact with and interact
+with the atmosphere it passes through. This interaction may take place a second time as the
+energy travels from the target to the sensor. Once the energy makes its way to the target
+through the atmosphere, it interacts with the target depending on the properties of both the
+target and the radiation. A number of interactions are possible when Electromagnetic energy
+encountersmatter, whether solid, liquid or gas.
+  \begin{itemize}
+    \item Radiation may be transmitted, that is, passed through the substance.
+    \item Radiation may be absorbed by a substance and give up its energy largely toheating the
+  substance.
+    \item Radiation may be emitted by a substance as a function of its structure and
+  temperature. All matter at temperatures above absolute zero, 0°K, emits energy.
+    \item Radiation may be scattered, that is, deflected in all directions and lost ultimately to
+  absorption or further scattering (as light is scattered in the atmosphere).
+    \item Radiation may be reflected
+  \end{itemize}
+\end{frame}
+\begin{frame}{Recording of energy by the sensor}
+  After the energy has been scattered by, or emitted from the target, we require a sensor
+(mounted on a satellite orbiting in space) to collect and record the electromagnetic radiation.
+
+The sensors are popularly known by the EMR region they sense. Remote sensing can be
+broadly classified as optical and microwave (Navalgund et al, 2007). In optical remote
+sensing, sensors detect solar radiation in the visible, near-, middle- and thermal-infrared
+wavelength regions, reflected/scattered or emitted from the earth (Table 1). On the other
+hand, when the sensors work in the region of electromagnetic waves with frequencies
+between 109 and1012 Hz, it is called microwave remote sensing
+
+\begin{table}
+  \caption{The spectral regions used in satellite based remote sensing}\label{tab:spectral_regions}
+  \begin{center}
+    \begin{tabular}[c]{l|l|l}
+      \hline
+      \multicolumn{1}{c|}{\textbf{Region}} & 
+      \multicolumn{1}{c}{\textbf{Wavelength}} &
+      \multicolumn{1}{c}{\textbf{Property}} \\
+      \hline
+      Visible (blue, red, green) & 0.4-0.7um & Reflectance \\      
+      Reflective Infrared & 0.7-3.0um & Reflectance \\
+      Thermal Infrared & 3.0-15.0um & Radiative Temperature \\
+      Microwave & 0.1-30cm & Brightness Temperature (Passive), Backscaterring (Active)
+      \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+\end{frame}
+\begin{frame}{Resolution}
+  Resolution is a major sensor parameter, which has bearing on optimum utilization of data.
+  There are four types of resolution.
+
+  \begin{itemize}
+    \item Spatial Resolution: Sensor’s Ability to image (record) closely spaced objects so that
+they are distinguishable as separate object
+    \item Spectral Resolution: The spectral bandwidth in which the data is collected.
+(Full Width at Half Maximum)
+    \item Radiometric Resolution: The capability of the sensor to differentiate the smallest
+change in the spectral reflectance/emittance between various targets. This is
+represented as the noise equivalent change in reflectance (NE ) or temperature
+(NET))
+    \item Temporal Resolution represents the capability to view the same target, under similar
+conditions, at regular intervals. It is time interval between imaging collections over
+the same geographic location
+  \end{itemize}
+\end{frame}
+\begin{frame}{Transmission, reception and processing}
+
+\end{frame}
+\begin{frame}{Interpretation and Analysis}
+\end{frame}
+
+% Section 2: Machine Learning Techniques
+\section{Machine Learning Techniques in Disaster Management}
+\begin{frame}{Machine Learning Techniques}
+    \begin{itemize}
+        \item \textbf{Support Vector Machines (SVMs)}: Used for classifying flooded regions or landslide areas.
+        \item \textbf{Random Forest (RF)}: Detects wildfire risk zones by analyzing land cover changes.
+        \item \textbf{K-Nearest Neighbors (KNN)}: Identifies disaster-affected areas by comparing with historical data.
+    \end{itemize}
+    \vspace{5mm}
+    \textbf{Applications}: Flood detection, wildfire prediction, earthquake damage assessment.
+\end{frame}
+
+% Section 3: Deep Learning Techniques
+\section{Deep Learning Techniques in Disaster Management}
+\begin{frame}{Deep Learning Techniques}
+    \begin{itemize}
+        \item \textbf{Convolutional Neural Networks (CNNs)}: Used for image segmentation to detect floods, landslides, or damaged buildings.
+        \item \textbf{Recurrent Neural Networks (RNNs)}: Time-series analysis for wildfire spread or flood progression.
+        \item \textbf{Generative Adversarial Networks (GANs)}: Enhancing satellite imagery quality, disaster simulation.
+    \end{itemize}
+\end{frame}
+
+% Section 4: SAR Texture and Polarimetric Analysis
+\section{SAR Characteristics and Analysis}
+\subsection{SAR Texture Analysis}
+\begin{frame}{Texture in SAR Images}
+    \begin{itemize}
+        \item Texture refers to spatial patterns in pixel intensity.
+        \item Common texture features: Contrast, Entropy, Homogeneity, Energy.
+        \item \textbf{Applications}: 
+        \begin{itemize}
+            \item Flood detection (smooth texture in water regions).
+            \item Landslide and urban damage detection.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\subsection{Polarimetric SAR Analysis}
+\begin{frame}{Polarimetric SAR (PolSAR) Analysis}
+    \begin{itemize}
+        \item Polarimetric SAR captures data in multiple polarization states (HH, HV, VV, VH).
+        \item **Scattering mechanisms**: Surface, double-bounce, and volume scattering.
+        \item \textbf{Decomposition Techniques}:
+        \begin{itemize}
+            \item \textbf{Cloude-Pottier Decomposition}
+            \item \textbf{Freeman-Durden Decomposition}
+            \item \textbf{H/A/ Decomposition}
+        \end{itemize}
+        \item \textbf{Applications}:
+        \begin{itemize}
+            \item Flood mapping: PolSAR identifies flooded areas by distinguishing surface scattering.
+            \item Oil spill detection: Differentiates oil-covered water from clean water.
+            \item Earthquake damage: Monitors building collapse via double-bounce scattering.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+% Section 5: Case Studies
+\section{Case Studies}
+\begin{frame}{Case Studies of ML/DL in Disaster Response}
+    \begin{itemize}
+        \item \textbf{Hurricane Damage Assessment}: CNNs used to detect flood extent post-Hurricane Harvey.
+        \item \textbf{Nepal Earthquake}: SAR and CNNs used to detect landslides.
+        \item \textbf{California Wildfires}: RF models for predicting fire-prone areas and DL for burn severity mapping.
+    \end{itemize}
+\end{frame}
+
+% Section 6: Conclusion
+\section{Conclusion}
+\begin{frame}{Conclusion}
+    \begin{itemize}
+        \item Machine learning and deep learning are transforming disaster management through fast and accurate satellite image analysis.
+        \item SAR texture and polarimetric analysis provide detailed surface information for disasters like floods, oil spills, and earthquakes.
+        \item The integration of AI and remote sensing will enhance real-time disaster detection and response capabilities.
+    \end{itemize}
+\end{frame}
+
+% References slide
+\section{References}
+\begin{frame}{References}
+    \begin{itemize}
+        \item \url{https://disasterscharter.org/}
+        \item Sentinel-1 and Sentinel-2 data examples from \url{https://www.copernicus.eu/}
+        \item PRISMA hyperspectral satellite data from \url{https://www.asi.it/en/activity/earth-observation/prisma/}
+    \end{itemize}
+\end{frame}
+
+\end{document}
+

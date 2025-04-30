@@ -1,0 +1,28 @@
+<graph id="Graph">
+  <version>1.0</version>
+  <node id="GLCM">
+    <operator>GLCM</operator>
+    <sources>
+      <sourceProduct>${sourceProduct}</sourceProduct>
+    </sources>
+    <parameters class="com.bc.ceres.binding.dom.XppDomElement">
+      <sourceBands>Sigma0_VV_db,Sigma0_VH_db</sourceBands>
+      <windowSizeStr>7x7</windowSizeStr>
+      <angleStr>ALL</angleStr>
+      <quantizerStr>Probabilistic Quantizer</quantizerStr>
+      <quantizationLevelsStr>32</quantizationLevelsStr>
+      <displacement>4</displacement>
+      <noDataValue>-9999.0</noDataValue>
+      <outputContrast>true</outputContrast>
+      <outputDissimilarity>true</outputDissimilarity>
+      <outputHomogeneity>true</outputHomogeneity>
+      <outputASM>true</outputASM>
+      <outputEnergy>true</outputEnergy>
+      <outputMAX>true</outputMAX>
+      <outputEntropy>true</outputEntropy>
+      <outputMean>true</outputMean>
+      <outputVariance>true</outputVariance>
+      <outputCorrelation>true</outputCorrelation>
+    </parameters>
+  </node>
+</graph>
