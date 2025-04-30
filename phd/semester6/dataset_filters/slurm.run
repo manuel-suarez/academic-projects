@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#SBATCH --partition=C0
+#SBATCH --job-name=OilSpillDatasetCimatFilters
+#SBATCH --mem=0
+#SBATCH --time=0
+#SBATCH --array=1
+#SBATCH --nodes=1
+
+/home/est_posgrado_manuel.suarez/miniconda3/envs/py38/bin/python main.py

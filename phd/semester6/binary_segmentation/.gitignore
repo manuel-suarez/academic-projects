@@ -1,0 +1,7 @@
+figures/
+lightning_logs/
+results/
+*.out
+__pycache__
+unetv2_results_50epochs
+unetv3_results_50epochs

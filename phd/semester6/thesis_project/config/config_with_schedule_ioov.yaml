@@ -1,0 +1,29 @@
+accuracy_enc_plot: "plots/acc_enc_"
+loss_enc_plot: "plots/loss_enc_"
+accuracy_dec_plot: "plots/acc_dec_"
+loss_dec_plot: "plots/loss_dec_"
+params_out: "train/"
+plots_out: "plots/"
+
+model_file: "./models/fpn/resnet34/model.json"
+model_params: "./models/fpn/resnet34/params.h5"
+channel_configuration: ["ORIGIN", "ORIGIN", "VAR"] #this should be adjusted according the channel configuration
+
+device: "/device:GPU:0"
+batch_size : 64 #this should be adjusted according the RAM size of the  GPU o CPU 
+encoder_iterations: 80 #this should be adjusted according the testing accuracy
+decoder_iterations: 80 #this should be adjusted according the testing accuracy
+
+schedule_min_lr: 1e-5 #this should be adjusted according the testing accuracy
+schedule_max_lr: 1e-3 #this should be adjusted according the testing accuracy
+schedule_steps_per_epoch: 20 #this should be adjusted according the testing accuracy
+schedule_lr_decay: 0.5 #this should be adjusted according the testing accuracy
+default_lr: 1e-4 #this should be adjusted according the testing accuracy
+use_schedule: true #this should be adjusted according the testing accuracy
+train_encoder: true #this should be adjusted according the testing accuracy
+
+feature_ext : ".tiff"
+label_ext: ".pgm"
+input_shape : [224, 224, 3]
+
+check_on: 20
