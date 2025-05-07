@@ -1,0 +1,56 @@
+Count models:  {'unet': 1, 'linknet': 1, 'pspnet': 1}
+Validate:  [False, False, False]
+Namespace(models_names=['unet', 'linknet', 'pspnet'], encoders_names=['resnet34', 'senet34', 'cbamnet34'], epochs='best', metrics=['precision', 'recall', 'f1score', 'm_iou'], losses=['bce'], datasets=['sos_a'], training_steps=['test'], results_path='results', metrics_path='metrics', metrics_file='epoch_metrics.csv')
+Models names:  ['unet', 'linknet', 'pspnet']
+Encoders names:  ['resnet34', 'senet34', 'cbamnet34']
+Metrics:  ['precision', 'recall', 'f1score', 'm_iou']
+Losses:  ['bce']
+Datasets:  ['sos_a']
+Training steps:  ['test']
+Results path:  results
+Metrics path:  metrics
+Metrics file:  epoch_metrics.csv
+\subsubsection{Metric: precision, training step: test}
+\begin{tabular}{llll}
+\toprule
+Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
+\midrule
+UNet & 0.884812 (5) & 0.874568 (38) & 0.872251 (2) \\
+LinkNet & 0.875601 (7) & 0.891858 (5) & 0.887152 (6) \\
+PSPNet & 0.875480 (3) & 0.879255 (6) & 0.878549 (3) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: recall, training step: test}
+\begin{tabular}{llll}
+\toprule
+Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
+\midrule
+UNet & 0.894522 (35) & 0.892427 (9) & 0.883264 (5) \\
+LinkNet & 0.901660 (1) & 0.873497 (3) & 0.894358 (4) \\
+PSPNet & 0.840697 (31) & 0.848959 (7) & 0.858920 (39) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: f1score, training step: test}
+\begin{tabular}{llll}
+\toprule
+Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
+\midrule
+UNet & 0.864613 (8) & 0.862124 (7) & 0.869856 (6) \\
+LinkNet & 0.857404 (4) & 0.860627 (4) & 0.864546 (6) \\
+PSPNet & 0.838653 (31) & 0.843313 (10) & 0.845380 (39) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: m_iou, training step: test}
+\begin{tabular}{llll}
+\toprule
+Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
+\midrule
+UNet & 0.810812 (8) & 0.807340 (7) & 0.817304 (6) \\
+LinkNet & 0.803220 (4) & 0.808323 (4) & 0.812962 (6) \\
+PSPNet & 0.779670 (27) & 0.785475 (12) & 0.787484 (38) \\
+\bottomrule
+\end{tabular}
+

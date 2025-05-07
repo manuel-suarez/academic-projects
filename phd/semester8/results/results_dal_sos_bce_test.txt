@@ -1,0 +1,56 @@
+Count models:  {'unet': 1, 'linknet': 1, 'pspnet': 1}
+Validate:  [False, False, False]
+Namespace(models_names=['unet', 'linknet', 'pspnet'], encoders_names=['resnet34', 'resnet34_MRv8_MDv1', 'resnet34_MRv8_MDv2', 'resnet34_MRv8_MDv3', 'resnet34_MRv8_MDv4'], epochs='best', metrics=['precision', 'recall', 'f1score', 'm_iou'], losses=['bce'], datasets=['sos'], training_steps=['test'], results_path='results', metrics_path='metrics', metrics_file='epoch_metrics.csv')
+Models names:  ['unet', 'linknet', 'pspnet']
+Encoders names:  ['resnet34', 'resnet34_MRv8_MDv1', 'resnet34_MRv8_MDv2', 'resnet34_MRv8_MDv3', 'resnet34_MRv8_MDv4']
+Metrics:  ['precision', 'recall', 'f1score', 'm_iou']
+Losses:  ['bce']
+Datasets:  ['sos']
+Training steps:  ['test']
+Results path:  results
+Metrics path:  metrics
+Metrics file:  epoch_metrics.csv
+\subsubsection{Metric: precision, training step: test}
+\begin{tabular}{llllll}
+\toprule
+Models & ResNet34 & ResNet34+MR (CNN)+MR+DAL(Channel) & ResNet34+MR (CNN)+MR+DAL(Spatial) & ResNet34+MR (CNN)+MR+DAL(Gated) & ResNet34+MR (CNN)+MR+DAL(Multi) \\
+\midrule
+UNet & 0.871748 (16) & 0.866284 (7) & 0.864833 (38) & 0.879395 (32) & 0.862463 (2) \\
+LinkNet & 0.879640 (34) & 0.852912 (12) & 0.863817 (14) & 0.859934 (21) & 0.879433 (35) \\
+PSPNet & 0.914801 (8) & 0.847542 (13) & 0.858720 (5) & 0.860983 (13) & 0.864306 (38) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: recall, training step: test}
+\begin{tabular}{llllll}
+\toprule
+Models & ResNet34 & ResNet34+MR (CNN)+MR+DAL(Channel) & ResNet34+MR (CNN)+MR+DAL(Spatial) & ResNet34+MR (CNN)+MR+DAL(Gated) & ResNet34+MR (CNN)+MR+DAL(Multi) \\
+\midrule
+UNet & 0.882198 (36) & 0.905300 (33) & 0.921375 (40) & 0.922851 (38) & 0.876161 (4) \\
+LinkNet & 0.875926 (9) & 0.901408 (4) & 0.918906 (2) & 0.903768 (10) & 0.855957 (8) \\
+PSPNet & 0.871979 (4) & 0.870303 (15) & 0.885675 (9) & 0.887353 (8) & 0.856608 (4) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: f1score, training step: test}
+\begin{tabular}{llllll}
+\toprule
+Models & ResNet34 & ResNet34+MR (CNN)+MR+DAL(Channel) & ResNet34+MR (CNN)+MR+DAL(Spatial) & ResNet34+MR (CNN)+MR+DAL(Gated) & ResNet34+MR (CNN)+MR+DAL(Multi) \\
+\midrule
+UNet & 0.860053 (8) & 0.864500 (13) & 0.865053 (14) & 0.865066 (30) & 0.837568 (17) \\
+LinkNet & 0.861503 (11) & 0.860478 (12) & 0.865285 (12) & 0.862881 (14) & 0.835667 (12) \\
+PSPNet & 0.839691 (38) & 0.835529 (11) & 0.844121 (12) & 0.840295 (12) & 0.821740 (9) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: m_iou, training step: test}
+\begin{tabular}{llllll}
+\toprule
+Models & ResNet34 & ResNet34+MR (CNN)+MR+DAL(Channel) & ResNet34+MR (CNN)+MR+DAL(Spatial) & ResNet34+MR (CNN)+MR+DAL(Gated) & ResNet34+MR (CNN)+MR+DAL(Multi) \\
+\midrule
+UNet & 0.808299 (8) & 0.810308 (13) & 0.813103 (37) & 0.811361 (30) & 0.778712 (14) \\
+LinkNet & 0.811111 (11) & 0.807592 (12) & 0.812023 (12) & 0.808004 (14) & 0.781171 (12) \\
+PSPNet & 0.783895 (11) & 0.778935 (11) & 0.786997 (12) & 0.783088 (13) & 0.763598 (9) \\
+\bottomrule
+\end{tabular}
+

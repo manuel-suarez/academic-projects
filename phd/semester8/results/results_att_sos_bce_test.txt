@@ -1,0 +1,56 @@
+Count models:  {'unet': 1, 'linknet': 1, 'pspnet': 1}
+Validate:  [False, False, False]
+Namespace(models_names=['unet', 'linknet', 'pspnet'], encoders_names=['resnet34', 'senet34', 'cbamnet34'], epochs='best', metrics=['precision', 'recall', 'f1score', 'm_iou'], losses=['bce'], datasets=['sos'], training_steps=['test'], results_path='results', metrics_path='metrics', metrics_file='epoch_metrics.csv')
+Models names:  ['unet', 'linknet', 'pspnet']
+Encoders names:  ['resnet34', 'senet34', 'cbamnet34']
+Metrics:  ['precision', 'recall', 'f1score', 'm_iou']
+Losses:  ['bce']
+Datasets:  ['sos']
+Training steps:  ['test']
+Results path:  results
+Metrics path:  metrics
+Metrics file:  epoch_metrics.csv
+\subsubsection{Metric: precision, training step: test}
+\begin{tabular}{llll}
+\toprule
+Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
+\midrule
+UNet & 0.871748 (16) & 0.890777 (32) & 0.890949 (15) \\
+LinkNet & 0.879640 (34) & 0.896109 (6) & 0.895860 (12) \\
+PSPNet & 0.914801 (8) & 0.870158 (35) & 0.866524 (6) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: recall, training step: test}
+\begin{tabular}{llll}
+\toprule
+Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
+\midrule
+UNet & 0.882198 (36) & 0.912444 (7) & 0.890940 (36) \\
+LinkNet & 0.875926 (9) & 0.897157 (38) & 0.895900 (3) \\
+PSPNet & 0.871979 (4) & 0.840804 (10) & 0.846647 (38) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: f1score, training step: test}
+\begin{tabular}{llll}
+\toprule
+Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
+\midrule
+UNet & 0.860053 (8) & 0.866432 (12) & 0.868049 (13) \\
+LinkNet & 0.861503 (11) & 0.860693 (13) & 0.864862 (7) \\
+PSPNet & 0.839691 (38) & 0.840147 (10) & 0.840942 (10) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: m_iou, training step: test}
+\begin{tabular}{llll}
+\toprule
+Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
+\midrule
+UNet & 0.808299 (8) & 0.816302 (12) & 0.816851 (13) \\
+LinkNet & 0.811111 (11) & 0.807876 (13) & 0.815483 (7) \\
+PSPNet & 0.783895 (11) & 0.784505 (8) & 0.786328 (10) \\
+\bottomrule
+\end{tabular}
+

@@ -1,0 +1,56 @@
+Count models:  {'unet': 1, 'linknet': 1, 'pspnet': 1}
+Validate:  [False, False, False]
+Namespace(models_names=['unet', 'linknet', 'pspnet'], encoders_names=['resnet34', 'senet34', 'cbamnet34'], epochs='best', metrics=['precision', 'recall', 'f1score', 'm_iou'], losses=['dice'], datasets=['sos'], training_steps=['test'], results_path='results', metrics_path='metrics', metrics_file='epoch_metrics.csv')
+Models names:  ['unet', 'linknet', 'pspnet']
+Encoders names:  ['resnet34', 'senet34', 'cbamnet34']
+Metrics:  ['precision', 'recall', 'f1score', 'm_iou']
+Losses:  ['dice']
+Datasets:  ['sos']
+Training steps:  ['test']
+Results path:  results
+Metrics path:  metrics
+Metrics file:  epoch_metrics.csv
+\subsubsection{Metric: precision, training step: test}
+\begin{tabular}{llll}
+\toprule
+Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
+\midrule
+UNet & 0.850834 (34) & 0.852187 (28) & 0.844897 (39) \\
+LinkNet & 0.855111 (31) & 0.852534 (31) & 0.847829 (31) \\
+PSPNet & 0.811792 (25) & 0.814843 (10) & 0.819595 (10) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: recall, training step: test}
+\begin{tabular}{llll}
+\toprule
+Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
+\midrule
+UNet & 0.942584 (1) & 0.926279 (32) & 0.947426 (2) \\
+LinkNet & 0.949421 (1) & 0.949826 (1) & 0.938521 (3) \\
+PSPNet & 0.939783 (1) & 0.922160 (5) & 0.939705 (2) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: f1score, training step: test}
+\begin{tabular}{llll}
+\toprule
+Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
+\midrule
+UNet & 0.862135 (23) & 0.864494 (28) & 0.864940 (27) \\
+LinkNet & 0.860410 (20) & 0.861669 (32) & 0.861167 (30) \\
+PSPNet & 0.840459 (14) & 0.842891 (10) & 0.839688 (10) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: m_iou, training step: test}
+\begin{tabular}{llll}
+\toprule
+Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
+\midrule
+UNet & 0.806285 (23) & 0.812020 (28) & 0.811455 (27) \\
+LinkNet & 0.804571 (20) & 0.808820 (32) & 0.806788 (30) \\
+PSPNet & 0.779557 (14) & 0.783159 (10) & 0.780452 (10) \\
+\bottomrule
+\end{tabular}
+
