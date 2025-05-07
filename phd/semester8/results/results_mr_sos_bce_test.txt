@@ -1,15 +1,15 @@
 Count models:  {'unet': 1, 'linknet': 1, 'pspnet': 1}
 Validate:  [False, False, False]
-Namespace(models_names=['unet', 'linknet', 'pspnet'], encoders_names=['resnet34', 'resnet34_MRv1', 'resnet34_MRv2', 'resnet34_MRv3', 'resnet34_MRv4', 'resnet34_MRv5', 'resnet34_MRv6', 'resnet34_MRv7', 'resnet34_MRv8'], epochs='best', metrics=['precision', 'recall', 'f1score', 'm_iou'], losses=['bce'], datasets=['sos'], training_steps=['test'], results_path='results', metrics_path='metrics', metrics_file='epoch_metrics.csv')
+Namespace(models\_names=['unet', 'linknet', 'pspnet'], encoders\_names=['resnet34', 'resnet34\_MRv1', 'resnet34\_MRv2', 'resnet34\_MRv3', 'resnet34\_MRv4', 'resnet34\_MRv5', 'resnet34\_MRv6', 'resnet34\_MRv7', 'resnet34\_MRv8'], epochs='best', metrics=['precision', 'recall', 'f1score', 'm\_iou'], losses=['bce'], datasets=['sos'], training\_steps=['test'], results\_path='results', metrics\_path='metrics', metrics\_file='epoch\_metrics.csv')
 Models names:  ['unet', 'linknet', 'pspnet']
-Encoders names:  ['resnet34', 'resnet34_MRv1', 'resnet34_MRv2', 'resnet34_MRv3', 'resnet34_MRv4', 'resnet34_MRv5', 'resnet34_MRv6', 'resnet34_MRv7', 'resnet34_MRv8']
-Metrics:  ['precision', 'recall', 'f1score', 'm_iou']
+Encoders names:  ['resnet34', 'resnet34\_MRv1', 'resnet34\_MRv2', 'resnet34\_MRv3', 'resnet34\_MRv4', 'resnet34\_MRv5', 'resnet34\_MRv6', 'resnet34\_MRv7', 'resnet34\_MRv8']
+Metrics:  ['precision', 'recall', 'f1score', 'm\_iou']
 Losses:  ['bce']
 Datasets:  ['sos']
 Training steps:  ['test']
 Results path:  results
 Metrics path:  metrics
-Metrics file:  epoch_metrics.csv
+Metrics file:  epoch\_metrics.csv
 \subsubsection{Metric: precision, training step: test}
 \begin{tabular}{llllllllll}
 \toprule
@@ -43,7 +43,7 @@ PSPNet & 0.839691 (38) & 0.847371 (11) & 0.845613 (14) & 0.844805 (13) & 0.84150
 \bottomrule
 \end{tabular}
 
-\subsubsection{Metric: m_iou, training step: test}
+\subsubsection{Metric: m\_iou, training step: test}
 \begin{tabular}{llllllllll}
 \toprule
 Models & ResNet34 & ResNet34+MR (add) & ResNet34+MR (cat) & ResNet34+MR (max) & ResNet34+MR (rand) & ResNet34+MR (alpha) & ResNet34+MR (alpha+pos) & ResNet34+MR (MLP) & ResNet34+MR (CNN) \\

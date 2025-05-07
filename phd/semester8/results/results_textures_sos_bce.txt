@@ -1,0 +1,45 @@
+Count models:  {'unet': 1, 'linknet': 1, 'pspnet': 1}
+Validate:  [False, False, False]
+Namespace(models\_names=['unet', 'linknet', 'pspnet'], encoders\_names=['resnet34'], epochs='best', metrics=['precision', 'recall', 'f1score'], losses=['bce'], datasets=['sos'], dataset\_features=['ta', 'td', 'th', 'tn', 'ts', 'tc', 'te', 'tm', 'tr', 'tv'], training\_steps=['test'], results\_path='results', metrics\_path='metrics', metrics\_file='epoch\_metrics.csv')
+Models names:  ['unet', 'linknet', 'pspnet']
+Encoders names:  ['resnet34']
+Metrics:  ['precision', 'recall', 'f1score']
+Losses:  ['bce']
+Datasets:  ['sos']
+Training steps:  ['test']
+Results path:  results
+Metrics path:  metrics
+Metrics file:  epoch\_metrics.csv
+\subsubsection{Metric: precision, training step: test}
+\begin{tabular}{lllllllllll}
+\toprule
+Models & asm & dissimilarity & homogeneity & entropy & std & contrast & energy & mean & correlation & variance \\
+\midrule
+UNet & 0.897231 (4) & 0.888303 (9) & 0.865331 (12) & 0.857635 (7) & 0.865795 (11) & 0.878937 (12) & 0.898868 (5) & 0.883088 (6) & 0.809331 (5) & 0.862154 (6) \\
+LinkNet & 0.883877 (5) & 0.862012 (4) & 0.884590 (2) & 0.874070 (3) & 0.850623 (37) & 0.868951 (7) & 0.890831 (5) & 0.871683 (34) & 0.823289 (5) & 0.841391 (9) \\
+PSPNet & 0.844798 (10) & 0.876430 (10) & 0.858725 (6) & 0.865702 (1) & 0.837229 (6) & 0.847791 (7) & 0.866944 (7) & 0.895662 (38) & 0.792201 (9) & 0.854343 (13) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: recall, training step: test}
+\begin{tabular}{lllllllllll}
+\toprule
+Models & asm & dissimilarity & homogeneity & entropy & std & contrast & energy & mean & correlation & variance \\
+\midrule
+UNet & 0.807130 (14) & 0.841905 (3) & 0.798553 (1) & 0.940277 (1) & 0.891326 (1) & 0.792971 (5) & 0.822980 (9) & 0.917716 (3) & 0.781801 (8) & 0.941116 (1) \\
+LinkNet & 0.832903 (3) & 0.814532 (9) & 0.839463 (3) & 0.819158 (1) & 0.845448 (31) & 0.818625 (13) & 0.827281 (10) & 0.908615 (7) & 0.622347 (31) & 0.873298 (11) \\
+PSPNet & 0.807620 (6) & 0.748341 (34) & 0.769910 (3) & 0.898983 (34) & 0.792159 (33) & 0.793680 (37) & 0.859126 (38) & 0.891187 (2) & 0.623812 (4) & 0.852321 (4) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: f1score, training step: test}
+\begin{tabular}{lllllllllll}
+\toprule
+Models & asm & dissimilarity & homogeneity & entropy & std & contrast & energy & mean & correlation & variance \\
+\midrule
+UNet & 0.811088 (11) & 0.772997 (8) & 0.768386 (8) & 0.818270 (12) & 0.832144 (9) & 0.780939 (17) & 0.820591 (18) & 0.862295 (14) & 0.662640 (8) & 0.829961 (12) \\
+LinkNet & 0.817529 (14) & 0.769382 (10) & 0.774427 (12) & 0.826155 (10) & 0.833248 (10) & 0.785830 (13) & 0.818600 (9) & 0.859572 (13) & 0.630149 (31) & 0.825882 (12) \\
+PSPNet & 0.804199 (11) & 0.770390 (7) & 0.752279 (3) & 0.800989 (9) & 0.795346 (14) & 0.763799 (6) & 0.803983 (8) & 0.838593 (9) & 0.618533 (4) & 0.809050 (12) \\
+\bottomrule
+\end{tabular}
+

@@ -1,0 +1,45 @@
+Count models:  {'unet': 1, 'linknet': 1, 'pspnet': 1}
+Validate:  [False, False, False]
+Namespace(models\_names=['unet', 'linknet', 'pspnet'], encoders\_names=['resnet34'], epochs='best', metrics=['precision', 'recall', 'f1score'], losses=['bce'], datasets=['sos'], dataset\_features=['o-pc-ta', 'o-pc-td', 'o-pc-th', 'o-pc-tn', 'o-pc-ts', 'o-pc-tc', 'o-pc-te', 'o-pc-tm', 'o-pc-tr', 'o-pc-tv'], training\_steps=['test'], results\_path='results', metrics\_path='metrics', metrics\_file='epoch\_metrics.csv')
+Models names:  ['unet', 'linknet', 'pspnet']
+Encoders names:  ['resnet34']
+Metrics:  ['precision', 'recall', 'f1score']
+Losses:  ['bce']
+Datasets:  ['sos']
+Training steps:  ['test']
+Results path:  results
+Metrics path:  metrics
+Metrics file:  epoch\_metrics.csv
+\subsubsection{Metric: precision, training step: test}
+\begin{tabular}{lllllllllll}
+\toprule
+Models & sar-gearys\_c-asm & sar-gearys\_c-dissimilarity & sar-gearys\_c-homogeneity & sar-gearys\_c-entropy & sar-gearys\_c-std & sar-gearys\_c-contrast & sar-gearys\_c-energy & sar-gearys\_c-mean & sar-gearys\_c-correlation & sar-gearys\_c-variance \\
+\midrule
+UNet & 0.878040 (29) & 0.870462 (33) & 0.870718 (7) & 0.875595 (38) & 0.881582 (9) & 0.892320 (4) & 0.898975 (4) & 0.873010 (36) & 0.888711 (8) & 0.873189 (8) \\
+LinkNet & 0.868213 (28) & 0.877061 (36) & 0.862681 (40) & 0.867532 (4) & 0.905718 (37) & 0.863951 (32) & 0.901175 (7) & 0.863476 (7) & 0.878580 (10) & 0.870525 (8) \\
+PSPNet & 0.872870 (39) & 0.862679 (33) & 0.882618 (7) & 0.885954 (39) & 0.855706 (8) & 0.864725 (4) & 0.876316 (2) & 0.844002 (10) & 0.898574 (4) & 0.874561 (10) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: recall, training step: test}
+\begin{tabular}{lllllllllll}
+\toprule
+Models & sar-gearys\_c-asm & sar-gearys\_c-dissimilarity & sar-gearys\_c-homogeneity & sar-gearys\_c-entropy & sar-gearys\_c-std & sar-gearys\_c-contrast & sar-gearys\_c-energy & sar-gearys\_c-mean & sar-gearys\_c-correlation & sar-gearys\_c-variance \\
+\midrule
+UNet & 0.900102 (35) & 0.920709 (4) & 0.901195 (1) & 0.894935 (13) & 0.908483 (4) & 0.905708 (2) & 0.864299 (15) & 0.900153 (7) & 0.907867 (7) & 0.914359 (9) \\
+LinkNet & 0.904703 (6) & 0.892783 (6) & 0.885848 (1) & 0.897025 (3) & 0.880857 (3) & 0.919590 (33) & 0.880857 (38) & 0.908603 (3) & 0.915943 (12) & 0.894863 (5) \\
+PSPNet & 0.839335 (2) & 0.870769 (6) & 0.891285 (2) & 0.871822 (4) & 0.830729 (9) & 0.845050 (9) & 0.851312 (38) & 0.885581 (3) & 0.862763 (2) & 0.926831 (8) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: f1score, training step: test}
+\begin{tabular}{lllllllllll}
+\toprule
+Models & sar-gearys\_c-asm & sar-gearys\_c-dissimilarity & sar-gearys\_c-homogeneity & sar-gearys\_c-entropy & sar-gearys\_c-std & sar-gearys\_c-contrast & sar-gearys\_c-energy & sar-gearys\_c-mean & sar-gearys\_c-correlation & sar-gearys\_c-variance \\
+\midrule
+UNet & 0.857677 (13) & 0.858898 (15) & 0.862541 (11) & 0.865731 (14) & 0.863884 (8) & 0.859810 (9) & 0.857852 (10) & 0.865593 (9) & 0.857950 (10) & 0.865478 (12) \\
+LinkNet & 0.860907 (8) & 0.859130 (10) & 0.857304 (12) & 0.860784 (11) & 0.861768 (9) & 0.856450 (12) & 0.856367 (14) & 0.860388 (10) & 0.857982 (9) & 0.858381 (12) \\
+PSPNet & 0.835431 (8) & 0.832873 (15) & 0.830174 (10) & 0.833320 (35) & 0.833875 (9) & 0.833670 (9) & 0.833897 (40) & 0.838116 (7) & 0.832681 (7) & 0.837633 (20) \\
+\bottomrule
+\end{tabular}
+

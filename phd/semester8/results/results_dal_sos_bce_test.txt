@@ -1,15 +1,15 @@
 Count models:  {'unet': 1, 'linknet': 1, 'pspnet': 1}
 Validate:  [False, False, False]
-Namespace(models_names=['unet', 'linknet', 'pspnet'], encoders_names=['resnet34', 'resnet34_MRv8_MDv1', 'resnet34_MRv8_MDv2', 'resnet34_MRv8_MDv3', 'resnet34_MRv8_MDv4'], epochs='best', metrics=['precision', 'recall', 'f1score', 'm_iou'], losses=['bce'], datasets=['sos'], training_steps=['test'], results_path='results', metrics_path='metrics', metrics_file='epoch_metrics.csv')
+Namespace(models\_names=['unet', 'linknet', 'pspnet'], encoders\_names=['resnet34', 'resnet34\_MRv8\_MDv1', 'resnet34\_MRv8\_MDv2', 'resnet34\_MRv8\_MDv3', 'resnet34\_MRv8\_MDv4'], epochs='best', metrics=['precision', 'recall', 'f1score', 'm\_iou'], losses=['bce'], datasets=['sos'], training\_steps=['test'], results\_path='results', metrics\_path='metrics', metrics\_file='epoch\_metrics.csv')
 Models names:  ['unet', 'linknet', 'pspnet']
-Encoders names:  ['resnet34', 'resnet34_MRv8_MDv1', 'resnet34_MRv8_MDv2', 'resnet34_MRv8_MDv3', 'resnet34_MRv8_MDv4']
-Metrics:  ['precision', 'recall', 'f1score', 'm_iou']
+Encoders names:  ['resnet34', 'resnet34\_MRv8\_MDv1', 'resnet34\_MRv8\_MDv2', 'resnet34\_MRv8\_MDv3', 'resnet34\_MRv8\_MDv4']
+Metrics:  ['precision', 'recall', 'f1score', 'm\_iou']
 Losses:  ['bce']
 Datasets:  ['sos']
 Training steps:  ['test']
 Results path:  results
 Metrics path:  metrics
-Metrics file:  epoch_metrics.csv
+Metrics file:  epoch\_metrics.csv
 \subsubsection{Metric: precision, training step: test}
 \begin{tabular}{llllll}
 \toprule
@@ -43,7 +43,7 @@ PSPNet & 0.839691 (38) & 0.835529 (11) & 0.844121 (12) & 0.840295 (12) & 0.82174
 \bottomrule
 \end{tabular}
 
-\subsubsection{Metric: m_iou, training step: test}
+\subsubsection{Metric: m\_iou, training step: test}
 \begin{tabular}{llllll}
 \toprule
 Models & ResNet34 & ResNet34+MR (CNN)+MR+DAL(Channel) & ResNet34+MR (CNN)+MR+DAL(Spatial) & ResNet34+MR (CNN)+MR+DAL(Gated) & ResNet34+MR (CNN)+MR+DAL(Multi) \\

@@ -1,15 +1,15 @@
 Count models:  {'unet': 1, 'linknet': 1, 'pspnet': 1}
 Validate:  [False, False, False]
-Namespace(models_names=['unet', 'linknet', 'pspnet'], encoders_names=['resnet34', 'senet34', 'cbamnet34'], epochs='best', metrics=['precision', 'recall', 'f1score', 'm_iou'], losses=['bce'], datasets=['sos_a'], training_steps=['test'], results_path='results', metrics_path='metrics', metrics_file='epoch_metrics.csv')
+Namespace(models\_names=['unet', 'linknet', 'pspnet'], encoders\_names=['resnet34', 'senet34', 'cbamnet34'], epochs='best', metrics=['precision', 'recall', 'f1score', 'm\_iou'], losses=['bce'], datasets=['sos\_a'], training\_steps=['test'], results\_path='results', metrics\_path='metrics', metrics\_file='epoch\_metrics.csv')
 Models names:  ['unet', 'linknet', 'pspnet']
 Encoders names:  ['resnet34', 'senet34', 'cbamnet34']
-Metrics:  ['precision', 'recall', 'f1score', 'm_iou']
+Metrics:  ['precision', 'recall', 'f1score', 'm\_iou']
 Losses:  ['bce']
-Datasets:  ['sos_a']
+Datasets:  ['sos\_a']
 Training steps:  ['test']
 Results path:  results
 Metrics path:  metrics
-Metrics file:  epoch_metrics.csv
+Metrics file:  epoch\_metrics.csv
 \subsubsection{Metric: precision, training step: test}
 \begin{tabular}{llll}
 \toprule
@@ -43,7 +43,7 @@ PSPNet & 0.838653 (31) & 0.843313 (10) & 0.845380 (39) \\
 \bottomrule
 \end{tabular}
 
-\subsubsection{Metric: m_iou, training step: test}
+\subsubsection{Metric: m\_iou, training step: test}
 \begin{tabular}{llll}
 \toprule
 Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\

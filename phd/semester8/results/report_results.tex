@@ -10,5 +10,46 @@
 \subsection{ResNet34 + Attention (SE, CBAM), Loss function: BCE}
 \input{results_att_sos_bce_test.txt}
 
+\subsection{ResNet34 + Attention (SE, CBAM), Loss function: DICE}
+\input{results_att_sos_dice_test.txt}
+
+\subsection{ResNet34 + Attention (SE, CBAM), Loss function: Tvsersky}
+\input{results_att_sos_tvsersky_test.txt}
+
+\subsection{ResNet34 + Attention (SE, CBAM), Loss function: Joint}
+\input{results_att_sos_joint_test.txt}
+
+\subsection{ResNet34 + MR, Loss function: BCE}
+\input{results_mr_sos_bce_test.txt}
+
+\subsection{ResNet34 + MR + DAL, Loss function: BCE}
+\input{results_dal_sos_bce_test.txt}
+
+\section{SOS Augmented Dataset}
+\subsection{ResNet34 + Attention (SE, CBAM), Loss function: BCE}
+\input{results_att_sos_a_bce_test.txt}
+
+\subsection{ResNet34 + Attention (SE, CBAM), Loss function: BCE}
+\input{results_mr_sos_a_bce_test.txt}
+
+\subsection{ResNet34 + Attention (SE, CBAM), Loss function: BCE}
+\input{results_dal_sos_a_bce_test.txt}
+
+\section{Losses}
+\subsection{ResNet34, SOS}
+\input{results_losses_resnet34_sos_test.txt}
+
+\section{Textures+Filters}
+\subsection{ResNet34, SOS, Textures}
+\input{results_textures_sos_bce.txt}
+
+\subsection{ResNet34, SOS, Variance + Textures}
+\input{results_variance_textures_sos_bce.txt}
+
+\subsection{ResNet34, SOS, Moran's I + Textures}
+\input{results_moran_id_textures_sos_bce.txt}
+
+\subsection{ResNet34, SOS, Geary's C + Textures}
+\input{results_geary_c_textures_sos_bce.txt}
 
 \end{document}

@@ -1,10 +1,10 @@
 Count models:  {'unet': 1, 'linknet': 1, 'pspnet': 1}
 Validate:  [False, False, False]
-Namespace(models\_names=['unet', 'linknet', 'pspnet'], encoders\_names=['resnet34', 'senet34', 'cbamnet34'], epochs='best', metrics=['precision', 'recall', 'f1score', 'm\_iou'], losses=['bce'], datasets=['sos'], training\_steps=['test'], results\_path='results', metrics\_path='metrics', metrics\_file='epoch\_metrics.csv')
+Namespace(models\_names=['unet', 'linknet', 'pspnet'], encoders\_names=['resnet34', 'senet34', 'cbamnet34'], epochs='best', metrics=['precision', 'recall', 'f1score', 'm\_iou'], losses=['joint'], datasets=['sos'], training\_steps=['test'], results\_path='results', metrics\_path='metrics', metrics\_file='epoch\_metrics.csv')
 Models names:  ['unet', 'linknet', 'pspnet']
 Encoders names:  ['resnet34', 'senet34', 'cbamnet34']
 Metrics:  ['precision', 'recall', 'f1score', 'm\_iou']
-Losses:  ['bce']
+Losses:  ['joint']
 Datasets:  ['sos']
 Training steps:  ['test']
 Results path:  results
@@ -15,9 +15,9 @@ Metrics file:  epoch\_metrics.csv
 \toprule
 Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
 \midrule
-UNet & 0.871748 (16) & 0.890777 (32) & 0.890949 (15) \\
-LinkNet & 0.879640 (34) & 0.896109 (6) & 0.895860 (12) \\
-PSPNet & 0.914801 (8) & 0.870158 (35) & 0.866524 (6) \\
+UNet & 0.877703 (37) & 0.873462 (38) & 0.876008 (3) \\
+LinkNet & 0.866839 (13) & 0.872439 (36) & 0.871679 (37) \\
+PSPNet & 0.847329 (17) & 0.875696 (40) & 0.844940 (37) \\
 \bottomrule
 \end{tabular}
 
@@ -26,9 +26,9 @@ PSPNet & 0.914801 (8) & 0.870158 (35) & 0.866524 (6) \\
 \toprule
 Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
 \midrule
-UNet & 0.882198 (36) & 0.912444 (7) & 0.890940 (36) \\
-LinkNet & 0.875926 (9) & 0.897157 (38) & 0.895900 (3) \\
-PSPNet & 0.871979 (4) & 0.840804 (10) & 0.846647 (38) \\
+UNet & 0.955315 (1) & 0.915122 (2) & 0.929229 (1) \\
+LinkNet & 0.961006 (1) & 0.909911 (5) & 0.930945 (1) \\
+PSPNet & 0.938482 (2) & 0.921550 (2) & 0.924205 (1) \\
 \bottomrule
 \end{tabular}
 
@@ -37,9 +37,9 @@ PSPNet & 0.871979 (4) & 0.840804 (10) & 0.846647 (38) \\
 \toprule
 Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
 \midrule
-UNet & 0.860053 (8) & 0.866432 (12) & 0.868049 (13) \\
-LinkNet & 0.861503 (11) & 0.860693 (13) & 0.864862 (7) \\
-PSPNet & 0.839691 (38) & 0.840147 (10) & 0.840942 (10) \\
+UNet & 0.865913 (9) & 0.864968 (11) & 0.868081 (10) \\
+LinkNet & 0.860451 (14) & 0.863929 (8) & 0.865757 (9) \\
+PSPNet & 0.841453 (11) & 0.842043 (7) & 0.843105 (12) \\
 \bottomrule
 \end{tabular}
 
@@ -48,9 +48,9 @@ PSPNet & 0.839691 (38) & 0.840147 (10) & 0.840942 (10) \\
 \toprule
 Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
 \midrule
-UNet & 0.808299 (8) & 0.816302 (12) & 0.816851 (13) \\
-LinkNet & 0.811111 (11) & 0.807876 (13) & 0.815483 (7) \\
-PSPNet & 0.783895 (11) & 0.784505 (8) & 0.786328 (10) \\
+UNet & 0.813041 (9) & 0.813643 (28) & 0.815514 (10) \\
+LinkNet & 0.805644 (14) & 0.810087 (8) & 0.813755 (13) \\
+PSPNet & 0.784295 (13) & 0.784372 (7) & 0.787513 (12) \\
 \bottomrule
 \end{tabular}
 
