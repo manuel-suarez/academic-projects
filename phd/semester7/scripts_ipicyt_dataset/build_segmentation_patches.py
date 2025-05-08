@@ -157,7 +157,7 @@ def patchify_image(
             os.path.join(dst_path, "images", dst_img_name + "_vv.png")
         )
         imsave(
-            os.path.join(dst_path, "labels", dst_img_name + ".png"),
+            os.path.join(dst_path, "labels", dst_img_name + ".tif"),
             mask_patch,
             check_contrast=False,
         )
