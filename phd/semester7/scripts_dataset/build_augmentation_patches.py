@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import albumentations as A
 
+from glob import glob
 from matplotlib import pyplot as plt
 from skimage.io import imread, imsave
 from PIL import Image
@@ -11,9 +12,9 @@ from tqdm import tqdm
 
 # Directories configuration
 home_path = os.path.expanduser("~")
-data_path = os.path.join(home_path, "data", "cimat")
-src_path = os.path.join(data_path, "dataset-cimat")
-dst_path = os.path.join(data_path, "dataset-cimat", "segmentation")
+data_path = os.path.join(home_path, "data")
+src_path = os.path.join(data_path, "cimat", "dataset-cimat")
+dst_path = os.path.join(data_path, "cimat", "dataset-cimat", "segmentation")
 # Initial configuration
 image_path = "image_norm"
 label_path = "mask_bin"
@@ -21,33 +22,16 @@ patch_size = 224
 
 Image.MAX_IMAGE_PIXELS = None
 
-# Get total oil and sea pixels
-mask_totals_df = pd.read_csv(
-    os.path.join(dst_path, "counts", "totals", "total_count.csv")
-)
-total_oil_pixels = mask_totals_df["oil_pixels"].iloc[0]
-total_sea_pixels = mask_totals_df["sea_pixels"].iloc[0]
-total_pixels = total_oil_pixels + total_sea_pixels
-# Open list of patches counts per image
-image_patches_dfs = []
-for fname in os.listdir(os.path.join(src_path, "image_norm")):
-    image_patches_df = pd.read_csv(
-        os.path.join(dst_path, "counts", "images", fname.split(".")[0] + ".csv")
-    )
-    image_patches_dfs.append(image_patches_df)
-# Join dataframe
-mask_images_patches = pd.concat(image_patches_dfs)
-print("Mask images patches: ", len(mask_images_patches))
-total_mask_patches = len(mask_images_patches)
-# Sort by oil pixels (descending)
-mask_images_patches = mask_images_patches.sort_values("oil_pixels", ascending=False)
+# Definimos el modelo U-Net con un backbone preentrenado (ResNet)
+slurm_array_task_id = os.getenv("SLURM_ARRAY_TASK_ID")
+slurm_ntasks = os.getenv("SLURM_NTASKS")
+slurm_procid = os.getenv("SLURM_PROCID")
+slurm_task_pid = os.getenv("SLURM_TASK_PID")
+print("SLURM_ARRAY_TASK_ID: ", slurm_array_task_id)
+print("SLURM_NTASKS: ", slurm_ntasks)
+print("SLURM_PROCID: ", slurm_procid)
+print("SLURM_TASK_PID: ", slurm_task_pid)
 
-print(
-    f"Initial total pixel counts, oil: {total_oil_pixels}, sea: {total_sea_pixels}, total: {total_pixels}"
-)
-print(
-    f"Percentage of pixel counts, oil: {round(total_oil_pixels/total_pixels,2)}, sea: {round(total_sea_pixels/total_pixels,2)}"
-)
 # Define transforms
 transform = A.Compose(
     [
@@ -56,62 +40,104 @@ transform = A.Compose(
         A.RandomBrightnessContrast(p=0.2),
     ]
 )
-# Iterate over list of patches augmenting those with more than 10% of oil pixels until we have approximate the equal
-augmented_oil_pixels = 0
-augmented_sea_pixels = 0
-for index, row in tqdm(mask_images_patches.iterrows()):
-    patch_oil_pixels = row["oil_pixels"]
-    patch_sea_pixels = row["sea_pixels"]
-    patch_total_pixels = row["total_pixels"]
-    patch_percentage_oil_pixels = round(patch_oil_pixels / patch_total_pixels * 100, 2)
-    if patch_percentage_oil_pixels >= 10.0:
-        num_of_patches = int(round(patch_percentage_oil_pixels, 0))
-        patch_name = row["patch_name"]
-        patch_image = imread(
-            os.path.join(dst_path, "features", "origin", patch_name + ".tif")
-        )
-        patch_label = imread(os.path.join(dst_path, "labels", patch_name + ".png"))
+
+
+def patchify_image(
+    src_path,
+    img_dir,
+    mask_dir,
+    dst_path,
+    img_name,
+    patch_size,
+):
+    print(
+        src_path,
+        img_dir,
+        mask_dir,
+        dst_path,
+        img_name,
+        patch_size,
+    )
+    # In this case we are counting how many patches were generated from this image using GLOB
+    images_patches = glob(
+        os.path.join(dst_path, "features", "origin", img_name + "_*_train.tif")
+    )
+    labels_patches = glob(os.path.join(dst_path, "labels", img_name + "_*_train.png"))
+
+    total_patches = len(images_patches)
+    patches_per_task = total_patches // int(slurm_ntasks)
+    missing_patches_per_task = total_patches % int(slurm_ntasks)
+
+    patches_indexes = [
+        int(slurm_procid) * patches_per_task + index
+        for index in range(patches_per_task)
+    ]
+    if int(slurm_procid) < missing_patches_per_task:
+        additional_index = int(slurm_ntasks) * patches_per_task + int(slurm_procid)
+        patches_indexes.append(additional_index)
+
+    print("Patches indexes: ", patches_indexes)
+
+    # Build patchex indexes to process considering the max patches, ntasks and task process id
+    for patch_index in patches_indexes:
+        image_patch_name = images_patches[patch_index]
+        label_patch_name = labels_patches[patch_index]
+
+        print("Processing patch name: ", image_patch_name)
+        print("Label patch name: ", label_patch_name)
+
+        # Original image patch
+        image_patch = imread(image_patch_name, as_gray=True)
+        label_patch = imread(label_patch_name, as_gray=True)
+        print("Image patch shape: ", image_patch.shape)
+
+        # Check if oil pixels are 12% of the patch
+        oil_pixels = np.count_nonzero(label_patch == 1)
+        total_pixels = label_patch.size
+        print("Oil pixels: ", oil_pixels)
+        print("Total pixels: ", total_pixels)
+        print("Oil pixels proportion: ", (oil_pixels / total_pixels))
+        # if (oil_pixels / total_pixels) < 0.10:
+        #    continue
+
+        # Fixed num of augmentations
+        num_of_patches = 1
+        print(f"Generating {num_of_patches} augmented patches...")
         for i in range(num_of_patches):
-            # Apply augmentation and save
-            transformed = transform(image=patch_image, mask=patch_label)
+            transformed = transform(image=image_patch, mask=label_patch)
             transformed_image = transformed["image"]
-            transformed_mask = transformed["mask"]
+            transformed_label = transformed["mask"]
             # Save
+            dst_name = image_patch_name.split("/")[-1]
+            dst_name = dst_name.split(".")[0]
             imsave(
                 os.path.join(
-                    dst_path, "features", "origin", patch_name + f"_aug{i:03d}.tif"
+                    dst_path, "features", "origin", dst_name + f"_aug{i:03d}.tif"
                 ),
                 transformed_image,
                 check_contrast=False,
             )
             imsave(
-                os.path.join(dst_path, "labels", patch_name + f"_aug{i:03d}.png"),
-                transformed_mask,
+                os.path.join(dst_path, "labels", dst_name + f"_aug{i:03d}.png"),
+                transformed_label,
                 check_contrast=False,
             )
 
-        augmented_oil_pixels += patch_oil_pixels * num_of_patches
-        augmented_sea_pixels += patch_sea_pixels * num_of_patches
-        total_mask_patches += num_of_patches
 
-# total of oil and sea pixels
-augmented_total_pixels = augmented_oil_pixels + augmented_sea_pixels
-print(
-    f"Augmented total pixel counts, oil: {augmented_oil_pixels}, sea: {augmented_sea_pixels}, total: {augmented_total_pixels}"
+# Create output directories
+os.makedirs(dst_path, exist_ok=True)
+os.makedirs(os.path.join(dst_path, "features", "origin"), exist_ok=True)
+os.makedirs(os.path.join(dst_path, "images"), exist_ok=True)
+os.makedirs(os.path.join(dst_path, "labels"), exist_ok=True)
+os.makedirs(os.path.join(dst_path, "figures"), exist_ok=True)
+
+fname = os.listdir(os.path.join(src_path, "image_norm"))[int(slurm_array_task_id) - 1]
+patchify_image(
+    src_path,
+    "image_norm",
+    "mask_bin",
+    dst_path,
+    fname.split(".")[0],
+    patch_size,
 )
-percentage_oil_pixels = round(augmented_oil_pixels / augmented_total_pixels, 2)
-percentage_sea_pixels = round(augmented_sea_pixels / augmented_total_pixels, 2)
-print(
-    f"Percentage of augmented pixel counts, oil: {percentage_oil_pixels}, sea: {percentage_sea_pixels}"
-)
-total_oil_pixels += augmented_oil_pixels
-total_sea_pixels += augmented_sea_pixels
-total_pixels = total_oil_pixels + total_sea_pixels
-print(
-    f"Final total pixel counts, oil: {total_oil_pixels}, sea: {total_sea_pixels}, total: {total_pixels}"
-)
-print(
-    f"Percentage of pixel counts, oil: {round(total_oil_pixels/total_pixels,2)}, sea: {round(total_sea_pixels/total_pixels,2)}"
-)
-print(f"Total patches count: {total_mask_patches}")
 print("Done!")

@@ -10,9 +10,9 @@ from tqdm import tqdm
 
 # Directories configuration
 home_path = os.path.expanduser("~")
-data_path = os.path.join(home_path, "data", "cimat")
-src_path = os.path.join(data_path, "dataset-cimat")
-dst_path = os.path.join(data_path, "dataset-cimat", "segmentation")
+data_path = os.path.join(home_path, "data")
+src_path = os.path.join(data_path, "cimat", "dataset-cimat")
+dst_path = os.path.join(data_path, "cimat", "dataset-cimat", "segmentation")
 # Initial configuration
 image_path = "image_norm"
 label_path = "mask_bin"
@@ -62,6 +62,8 @@ def patchify_image(
     # Verifying that image and mask have the same shape
     image_height, image_width = image.shape
     mask_height, mask_width = mask.shape
+    print("Image shape: ", image.shape)
+    print("Mask shape: ", mask.shape)
     if (image_height != mask_height) or (image_width != mask_width):
         print("Error, image and mask must have the same dimensions")
         exit(-1)
@@ -98,20 +100,32 @@ def patchify_image(
             x = image_width - patch_size - 1
         if y + patch_size > image_height:
             y = image_height - patch_size - 1
+        print("Position on image: ", y, x)
+        print("Patch size: ", patch_size)
 
         # Original image patch
         image_patch = image[y : y + patch_size, x : x + patch_size]
+        print("Image patch shape: ", image_patch.shape)
         # Scaled image patch
         image_scaled_patch = image_scaled[y : y + patch_size, x : x + patch_size]
         total_patches = total_patches + 1
         min_image_patch = np.min(image_patch)
         max_image_patch = np.max(image_patch)
         # We are checking if patch image values are 0, if so then continue next patch (we are in an invalid SAR image patch)
-        # if min_image_patch == 0 and max_image_patch == 0:
-        #    invalid_patches = invalid_patches + 1
-        #    continue
+        if min_image_patch == 0 and max_image_patch == 0:
+            continue
         dst_img_name = img_name + f"_{patch_index:04d}_train"
         mask_patch = mask[y : y + patch_size, x : x + patch_size]
+        print("Mask patch shape: ", mask_patch.shape)
+
+        # Check if oil pixels are 12% of the patch
+        oil_pixels = np.count_nonzero(mask_patch == 1)
+        total_pixels = mask_patch.size
+        print("Oil pixels: ", oil_pixels)
+        print("Total pixels: ", total_pixels)
+        print("Oil pixels proportion: ", (oil_pixels / total_pixels))
+        if (oil_pixels / total_pixels) < 0.01:
+            continue
 
         imsave(
             os.path.join(dst_path, "features", "origin", dst_img_name + ".tif"),
