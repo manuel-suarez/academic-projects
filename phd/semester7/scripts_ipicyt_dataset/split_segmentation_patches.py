@@ -11,16 +11,17 @@ from sklearn.model_selection import train_test_split
 # CONFIGURATION
 home_path = os.path.expanduser("~")
 data_path = os.path.join(home_path, "data")
-src_path = os.path.join(data_path, "cimat", "dataset-cimat")
-dst_path = os.path.join(data_path, "cimat", "dataset-cimat", "segmentation")
+src_path = os.path.join(data_path, "cimat", "dataset-ipicyt")
+dst_path = os.path.join(data_path, "cimat", "dataset-ipicyt", "segmentation")
 LABELS_DIR = os.path.join(dst_path, "labels")
-SAR_DIR = os.path.join(dst_path, "features", "origin")
-OUTPUT_DIR = os.path.join(data_path, "CIMAT_dataset")
+SAR_VH_DIR = os.path.join(dst_path, "features", "origin_vh")
+SAR_VV_DIR = os.path.join(dst_path, "features", "origin_vv")
+OUTPUT_DIR = os.path.join(data_path, "IPICYT_dataset")
 TEST_SIZE = 0.2
 RANDOM_STATE = 42
 
 # Step 1: Get label files
-label_files = sorted(glob.glob(os.path.join(LABELS_DIR, "*.png")))
+label_files = sorted(glob.glob(os.path.join(LABELS_DIR, "*.tif")))
 
 
 # Step 2: Oil spill % calculator
@@ -37,8 +38,11 @@ percentages = [calculate_percentage(fp) for fp in label_files]
 
 # Step 3: Build dataframe
 df = pd.DataFrame({"label_path": label_files, "oil_spill_percentage": percentages})
-df["image_path"] = df["label_path"].apply(
-    lambda x: os.path.join(SAR_DIR, os.path.basename(x).split(".")[0] + ".tif")
+df["image_vh_path"] = df["label_path"].apply(
+    lambda x: os.path.join(SAR_VH_DIR, os.path.basename(x).split(".")[0] + ".tif")
+)
+df["image_vv_path"] = df["label_path"].apply(
+    lambda x: os.path.join(SAR_VV_DIR, os.path.basename(x).split(".")[0] + ".tif")
 )
 
 # Step 4: Binning for stratification
@@ -70,18 +74,27 @@ print("\n✅ CSVs saved: 'train_split.csv', 'test_split.csv'")
 
 # Step 8: Create folder structure
 for split in ["train", "test"]:
-    for sub in ["images", "labels"]:
+    for sub in ["features/origin_vh", "features/origin_vv", "labels"]:
         os.makedirs(os.path.join(OUTPUT_DIR, split, sub), exist_ok=True)
 
 
 # Step 9: Copy files
 def copy_files(split_df, split_name):
     for _, row in split_df.iterrows():
-        image_name = os.path.basename(row["image_path"])
+        image_vh_name = os.path.basename(row["image_vh_path"])
+        image_vv_name = os.path.basename(row["image_vv_path"])
         label_name = os.path.basename(row["label_path"])
         shutil.copy(
-            row["image_path"],
-            os.path.join(OUTPUT_DIR, split_name, "images", image_name),
+            row["image_vh_path"],
+            os.path.join(
+                OUTPUT_DIR, split_name, "features", "origin_vh", image_vh_name
+            ),
+        )
+        shutil.copy(
+            row["image_vv_path"],
+            os.path.join(
+                OUTPUT_DIR, split_name, "features", "origin_vv", image_vv_name
+            ),
         )
         shutil.copy(
             row["label_path"],
