@@ -4,7 +4,7 @@
 #SBATCH --job-name=MakeSegmentationPatches
 #SBATCH --time=0
 #SBATCH --mem=0
-#SBATCH --array=1-19%1
+#SBATCH --array=1-12%1
 #SBATCH --ntasks=64
 #SBATCH --output=outputs/slurm-segmentation_patches-%A_%a.out
 
