@@ -13,7 +13,7 @@ Metrics file:  epoch\_metrics.csv
 \subsubsection{Metric: precision, training step: test}
 \begin{tabular}{llllll}
 \toprule
-Models & ResNet34 & ResNet34+MR (CNN)+MR+DAL(Channel) & ResNet34+MR (CNN)+MR+DAL(Spatial) & ResNet34+MR (CNN)+MR+DAL(Gated) & ResNet34+MR (CNN)+MR+DAL(Multi) \\
+Models & ResNet34 & MR+DAL(Channel) & MR+DAL(Spatial) & MR+DAL(Gated) & MR+DAL(Multi) \\
 \midrule
 UNet & 0.884812 (5) & 0.862908 (8) & 0.865751 (31) & 0.861292 (38) & 0.869136 (2) \\
 LinkNet & 0.875601 (7) & 0.851188 (10) & 0.874085 (6) & 0.852533 (10) & 0.887553 (8) \\
@@ -24,7 +24,7 @@ PSPNet & 0.875480 (3) & 0.850930 (8) & 0.848771 (3) & 0.856191 (7) & 0.877964 (3
 \subsubsection{Metric: recall, training step: test}
 \begin{tabular}{llllll}
 \toprule
-Models & ResNet34 & ResNet34+MR (CNN)+MR+DAL(Channel) & ResNet34+MR (CNN)+MR+DAL(Spatial) & ResNet34+MR (CNN)+MR+DAL(Gated) & ResNet34+MR (CNN)+MR+DAL(Multi) \\
+Models & ResNet34 & MR+DAL(Channel) & MR+DAL(Spatial) & MR+DAL(Gated) & MR+DAL(Multi) \\
 \midrule
 UNet & 0.894522 (35) & 0.948119 (33) & 0.903834 (6) & 0.912187 (5) & 0.817406 (14) \\
 LinkNet & 0.901660 (1) & 0.929293 (6) & 0.907641 (7) & 0.910307 (1) & 0.834259 (39) \\
@@ -35,7 +35,7 @@ PSPNet & 0.840697 (31) & 0.876360 (33) & 0.877695 (5) & 0.864880 (10) & 0.815070
 \subsubsection{Metric: f1score, training step: test}
 \begin{tabular}{llllll}
 \toprule
-Models & ResNet34 & ResNet34+MR (CNN)+MR+DAL(Channel) & ResNet34+MR (CNN)+MR+DAL(Spatial) & ResNet34+MR (CNN)+MR+DAL(Gated) & ResNet34+MR (CNN)+MR+DAL(Multi) \\
+Models & ResNet34 & MR+DAL(Channel) & MR+DAL(Spatial) & MR+DAL(Gated) & MR+DAL(Multi) \\
 \midrule
 UNet & 0.864613 (8) & 0.858746 (13) & 0.865382 (8) & 0.863921 (9) & 0.819902 (6) \\
 LinkNet & 0.857404 (4) & 0.858381 (8) & 0.864481 (10) & 0.866136 (9) & 0.818269 (14) \\
@@ -46,7 +46,7 @@ PSPNet & 0.838653 (31) & 0.834174 (32) & 0.842278 (9) & 0.839563 (10) & 0.801434
 \subsubsection{Metric: m\_iou, training step: test}
 \begin{tabular}{llllll}
 \toprule
-Models & ResNet34 & ResNet34+MR (CNN)+MR+DAL(Channel) & ResNet34+MR (CNN)+MR+DAL(Spatial) & ResNet34+MR (CNN)+MR+DAL(Gated) & ResNet34+MR (CNN)+MR+DAL(Multi) \\
+Models & ResNet34 & MR+DAL(Channel) & MR+DAL(Spatial) & MR+DAL(Gated) & MR+DAL(Multi) \\
 \midrule
 UNet & 0.810812 (8) & 0.800553 (10) & 0.809713 (7) & 0.806977 (9) & 0.757843 (6) \\
 LinkNet & 0.803220 (4) & 0.798968 (8) & 0.808077 (9) & 0.810799 (9) & 0.757504 (14) \\

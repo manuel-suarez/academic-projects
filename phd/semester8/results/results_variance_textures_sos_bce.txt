@@ -13,7 +13,7 @@ Metrics file:  epoch\_metrics.csv
 \subsubsection{Metric: precision, training step: test}
 \begin{tabular}{lllllllllll}
 \toprule
-Models & sar-variance-asm & sar-variance-contrast & sar-variance-correlation & sar-variance-dissimilarity & sar-variance-energy & sar-variance-entropy & sar-variance-homogeneity & sar-variance-mean & sar-variance-std & sar-variance-variance \\
+Models & variance-asm & variance-contrast & variance-correlation & variance-dissimilarity & variance-energy & variance-entropy & variance-homogeneity & variance-mean & variance-std & variance-variance \\
 \midrule
 UNet & 0.886592 (12) & 0.887693 (35) & 0.884017 (40) & 0.885641 (37) & 0.890841 (34) & 0.873016 (30) & 0.886589 (37) & 0.867818 (4) & 0.896732 (39) & 0.906878 (27) \\
 LinkNet & 0.884674 (10) & 0.867358 (9) & 0.871872 (28) & 0.891690 (4) & 0.861513 (34) & 0.867087 (20) & 0.882157 (13) & 0.892970 (38) & 0.896052 (30) & 0.869157 (40) \\
@@ -24,7 +24,7 @@ PSPNet & 0.868928 (8) & 0.859381 (9) & 0.864607 (12) & 0.859277 (6) & 0.894222 (
 \subsubsection{Metric: recall, training step: test}
 \begin{tabular}{lllllllllll}
 \toprule
-Models & sar-variance-asm & sar-variance-contrast & sar-variance-correlation & sar-variance-dissimilarity & sar-variance-energy & sar-variance-entropy & sar-variance-homogeneity & sar-variance-mean & sar-variance-std & sar-variance-variance \\
+Models & variance-asm & variance-contrast & variance-correlation & variance-dissimilarity & variance-energy & variance-entropy & variance-homogeneity & variance-mean & variance-std & variance-variance \\
 \midrule
 UNet & 0.906864 (1) & 0.905053 (11) & 0.895797 (5) & 0.889919 (11) & 0.913304 (5) & 0.907245 (1) & 0.922126 (40) & 0.930632 (1) & 0.918310 (3) & 0.906922 (3) \\
 LinkNet & 0.876644 (4) & 0.906568 (12) & 0.901382 (3) & 0.913504 (35) & 0.894043 (10) & 0.893089 (5) & 0.928933 (8) & 0.911035 (13) & 0.912977 (1) & 0.918338 (7) \\
@@ -35,7 +35,7 @@ PSPNet & 0.840242 (32) & 0.872982 (40) & 0.857533 (9) & 0.851557 (34) & 0.841851
 \subsubsection{Metric: f1score, training step: test}
 \begin{tabular}{lllllllllll}
 \toprule
-Models & sar-variance-asm & sar-variance-contrast & sar-variance-correlation & sar-variance-dissimilarity & sar-variance-energy & sar-variance-entropy & sar-variance-homogeneity & sar-variance-mean & sar-variance-std & sar-variance-variance \\
+Models & variance-asm & variance-contrast & variance-correlation & variance-dissimilarity & variance-energy & variance-entropy & variance-homogeneity & variance-mean & variance-std & variance-variance \\
 \midrule
 UNet & 0.864447 (10) & 0.861884 (12) & 0.860132 (11) & 0.864389 (12) & 0.865882 (11) & 0.866592 (10) & 0.866164 (15) & 0.862316 (14) & 0.865632 (11) & 0.863088 (13) \\
 LinkNet & 0.862136 (5) & 0.857616 (9) & 0.855568 (7) & 0.864677 (11) & 0.861825 (10) & 0.859798 (14) & 0.857473 (12) & 0.862899 (15) & 0.861157 (11) & 0.861589 (16) \\

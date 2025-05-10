@@ -1,0 +1,140 @@
+Count models:  {'unet': 1, 'linknet': 1, 'pspnet': 1, 'fpn': 1, 'deeplabv3p': 1, 'manet': 1, 'unet2p': 1, 'unet3p': 1}
+Validate:  [False, False, False, False, False, False, False, False]
+Namespace(models\_names=['unet', 'linknet', 'pspnet', 'fpn', 'deeplabv3p', 'manet', 'unet2p', 'unet3p'], encoders\_names=['resnet34', 'senet34', 'cbamnet34'], epochs='best', metrics=['precision', 'recall', 'f1score', 'm\_iou'], losses=['bce'], datasets=['sos'], training\_steps=['train', 'test'], results\_path='results', metrics\_path='metrics', metrics\_file='epoch\_metrics.csv')
+Models names:  ['unet', 'linknet', 'pspnet', 'fpn', 'deeplabv3p', 'manet', 'unet2p', 'unet3p']
+Encoders names:  ['resnet34', 'senet34', 'cbamnet34']
+Metrics:  ['precision', 'recall', 'f1score', 'm\_iou']
+Losses:  ['bce']
+Datasets:  ['sos']
+Training steps:  ['train', 'test']
+Results path:  results
+Metrics path:  metrics
+Metrics file:  epoch\_metrics.csv
+\subsubsection{Metric: precision, training step: train}
+\begin{tabular}{llll}
+\toprule
+Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
+\midrule
+UNet & 0.929294 (38) & 0.926762 (39) & 0.935779 (40) \\
+LinkNet & 0.930133 (40) & 0.934315 (40) & 0.937868 (40) \\
+PSPNet & 0.909801 (23) & 0.911548 (21) & 0.909245 (26) \\
+FPN & 0.954734 (40) & 0.954762 (40) & 0.952705 (40) \\
+DeepLabV3+ & 0.932058 (38) & 0.940325 (40) & 0.945776 (40) \\
+MA-Net & 0.949818 (40) & 0.946686 (39) & 0.946688 (39) \\
+UNet++ & 0.946212 (40) & 0.942640 (40) & 0.940882 (38) \\
+UNet3p & 0.951447 (40) & 0.953270 (40) & 0.954587 (40) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: precision, training step: test}
+\begin{tabular}{llll}
+\toprule
+Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
+\midrule
+UNet & 0.871748 (16) & 0.890777 (32) & 0.890949 (15) \\
+LinkNet & 0.879640 (34) & 0.896109 (6) & 0.895860 (12) \\
+PSPNet & 0.914801 (8) & 0.870158 (35) & 0.866524 (6) \\
+FPN & 0.876460 (33) & 0.884850 (9) & 0.898879 (3) \\
+DeepLabV3+ & 0.894174 (34) & 0.885774 (7) & 0.882682 (14) \\
+MA-Net & 0.900092 (7) & 0.892556 (13) & 0.886761 (8) \\
+UNet++ & 0.899764 (33) & 0.894608 (35) & 0.922809 (40) \\
+UNet3p & 0.896618 (12) & 0.901656 (8) & 0.894214 (6) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: recall, training step: train}
+\begin{tabular}{llll}
+\toprule
+Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
+\midrule
+UNet & 0.923237 (38) & 0.920491 (39) & 0.930761 (40) \\
+LinkNet & 0.925634 (40) & 0.931571 (40) & 0.933923 (40) \\
+PSPNet & 0.889091 (39) & 0.890910 (40) & 0.889123 (40) \\
+FPN & 0.952214 (40) & 0.952994 (40) & 0.950760 (40) \\
+DeepLabV3+ & 0.928339 (38) & 0.938252 (40) & 0.944087 (40) \\
+MA-Net & 0.947056 (40) & 0.944170 (39) & 0.943559 (39) \\
+UNet++ & 0.944245 (40) & 0.938763 (40) & 0.936727 (40) \\
+UNet3p & 0.949881 (40) & 0.951972 (40) & 0.953742 (40) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: recall, training step: test}
+\begin{tabular}{llll}
+\toprule
+Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
+\midrule
+UNet & 0.882198 (36) & 0.912444 (7) & 0.890940 (36) \\
+LinkNet & 0.875926 (9) & 0.897157 (38) & 0.895900 (3) \\
+PSPNet & 0.871979 (4) & 0.840804 (10) & 0.846647 (38) \\
+FPN & 0.887339 (5) & 0.910202 (5) & 0.896200 (11) \\
+DeepLabV3+ & 0.914414 (4) & 0.877710 (13) & 0.931804 (2) \\
+MA-Net & 0.912594 (32) & 0.879306 (5) & 0.890796 (9) \\
+UNet++ & 0.857862 (1) & 0.887704 (5) & 0.913718 (1) \\
+UNet3p & 0.886344 (7) & 0.895085 (6) & 0.902426 (1) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: f1score, training step: train}
+\begin{tabular}{llll}
+\toprule
+Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
+\midrule
+UNet & 0.926256 (38) & 0.923616 (39) & 0.933263 (40) \\
+LinkNet & 0.927878 (40) & 0.932941 (40) & 0.935892 (40) \\
+PSPNet & 0.898630 (39) & 0.900227 (40) & 0.898241 (40) \\
+FPN & 0.953472 (40) & 0.953877 (40) & 0.951731 (40) \\
+DeepLabV3+ & 0.930195 (38) & 0.939287 (40) & 0.944930 (40) \\
+MA-Net & 0.948435 (40) & 0.945426 (39) & 0.945121 (39) \\
+UNet++ & 0.945227 (40) & 0.940698 (40) & 0.938767 (38) \\
+UNet3p & 0.950663 (40) & 0.952621 (40) & 0.954164 (40) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: f1score, training step: test}
+\begin{tabular}{llll}
+\toprule
+Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
+\midrule
+UNet & 0.860053 (8) & 0.866432 (12) & 0.868049 (13) \\
+LinkNet & 0.861503 (11) & 0.860693 (13) & 0.864862 (7) \\
+PSPNet & 0.839691 (38) & 0.840147 (10) & 0.840942 (10) \\
+FPN & 0.853798 (40) & 0.865952 (6) & 0.865596 (8) \\
+DeepLabV3+ & 0.866959 (10) & 0.861914 (13) & 0.861786 (4) \\
+MA-Net & 0.859237 (9) & 0.856553 (5) & 0.862992 (9) \\
+UNet++ & 0.857064 (5) & 0.861519 (9) & 0.866313 (5) \\
+UNet3p & 0.865067 (6) & 0.861271 (11) & 0.865095 (8) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: m\_iou, training step: train}
+\begin{tabular}{llll}
+\toprule
+Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
+\midrule
+UNet & 0.899971 (38) & 0.896606 (39) & 0.908960 (40) \\
+LinkNet & 0.902012 (40) & 0.908495 (40) & 0.912344 (40) \\
+PSPNet & 0.865799 (39) & 0.867738 (40) & 0.865296 (40) \\
+FPN & 0.935475 (40) & 0.936005 (40) & 0.933144 (40) \\
+DeepLabV3+ & 0.904972 (38) & 0.916730 (40) & 0.924128 (40) \\
+MA-Net & 0.928778 (40) & 0.924796 (39) & 0.924404 (39) \\
+UNet++ & 0.924524 (40) & 0.918609 (40) & 0.916093 (38) \\
+UNet3p & 0.931717 (40) & 0.934320 (40) & 0.936375 (40) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: m\_iou, training step: test}
+\begin{tabular}{llll}
+\toprule
+Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
+\midrule
+UNet & 0.808299 (8) & 0.816302 (12) & 0.816851 (13) \\
+LinkNet & 0.811111 (11) & 0.807876 (13) & 0.815483 (7) \\
+PSPNet & 0.783895 (11) & 0.784505 (8) & 0.786328 (10) \\
+FPN & 0.800345 (9) & 0.815752 (6) & 0.815397 (8) \\
+DeepLabV3+ & 0.813822 (10) & 0.809642 (12) & 0.808775 (9) \\
+MA-Net & 0.808218 (9) & 0.802283 (11) & 0.812772 (8) \\
+UNet++ & 0.804288 (5) & 0.810801 (9) & 0.817920 (5) \\
+UNet3p & 0.814499 (6) & 0.809539 (11) & 0.815995 (6) \\
+\bottomrule
+\end{tabular}
+

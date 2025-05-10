@@ -13,7 +13,7 @@ Metrics file:  epoch\_metrics.csv
 \subsubsection{Metric: precision, training step: test}
 \begin{tabular}{lllllllllll}
 \toprule
-Models & sar-morans\_i-asm & sar-morans\_i-dissimilarity & sar-morans\_i-homogeneity & sar-morans\_i-entropy & sar-morans\_i-std & sar-morans\_i-contrast & sar-morans\_i-energy & sar-morans\_i-mean & sar-morans\_i-correlation & sar-morans\_i-variance \\
+Models & morans\_i-asm & morans\_i-dissimilarity & morans\_i-homogeneity & morans\_i-entropy & morans\_i-std & morans\_i-contrast & morans\_i-energy & morans\_i-mean & morans\_i-correlation & morans\_i-variance \\
 \midrule
 UNet & 0.880415 (37) & 0.866622 (37) & 0.880377 (8) & 0.907507 (32) & 0.874668 (24) & 0.894968 (5) & 0.877309 (11) & 0.863856 (32) & 0.884866 (9) & 0.902207 (6) \\
 LinkNet & 0.889510 (39) & 0.875835 (12) & 0.871945 (35) & 0.863198 (14) & 0.870180 (8) & 0.878841 (3) & 0.871452 (23) & 0.882310 (11) & 0.879793 (35) & 0.884510 (12) \\
@@ -24,7 +24,7 @@ PSPNet & 0.898566 (4) & 0.864150 (5) & 0.866201 (7) & 0.859559 (32) & 0.871917 (
 \subsubsection{Metric: recall, training step: test}
 \begin{tabular}{lllllllllll}
 \toprule
-Models & sar-morans\_i-asm & sar-morans\_i-dissimilarity & sar-morans\_i-homogeneity & sar-morans\_i-entropy & sar-morans\_i-std & sar-morans\_i-contrast & sar-morans\_i-energy & sar-morans\_i-mean & sar-morans\_i-correlation & sar-morans\_i-variance \\
+Models & morans\_i-asm & morans\_i-dissimilarity & morans\_i-homogeneity & morans\_i-entropy & morans\_i-std & morans\_i-contrast & morans\_i-energy & morans\_i-mean & morans\_i-correlation & morans\_i-variance \\
 \midrule
 UNet & 0.904460 (1) & 0.904411 (33) & 0.910667 (6) & 0.891410 (11) & 0.913111 (1) & 0.889411 (14) & 0.901923 (8) & 0.913428 (7) & 0.902252 (2) & 0.889852 (13) \\
 LinkNet & 0.912229 (5) & 0.924681 (1) & 0.912634 (7) & 0.932682 (1) & 0.897660 (7) & 0.910940 (7) & 0.887988 (5) & 0.913146 (33) & 0.901123 (13) & 0.909875 (8) \\
@@ -35,7 +35,7 @@ PSPNet & 0.919604 (2) & 0.852598 (6) & 0.869039 (40) & 0.853589 (3) & 0.863557 (
 \subsubsection{Metric: f1score, training step: test}
 \begin{tabular}{lllllllllll}
 \toprule
-Models & sar-morans\_i-asm & sar-morans\_i-dissimilarity & sar-morans\_i-homogeneity & sar-morans\_i-entropy & sar-morans\_i-std & sar-morans\_i-contrast & sar-morans\_i-energy & sar-morans\_i-mean & sar-morans\_i-correlation & sar-morans\_i-variance \\
+Models & morans\_i-asm & morans\_i-dissimilarity & morans\_i-homogeneity & morans\_i-entropy & morans\_i-std & morans\_i-contrast & morans\_i-energy & morans\_i-mean & morans\_i-correlation & morans\_i-variance \\
 \midrule
 UNet & 0.861223 (11) & 0.862453 (10) & 0.863406 (11) & 0.860351 (11) & 0.862311 (38) & 0.862734 (13) & 0.865381 (12) & 0.867129 (12) & 0.860311 (13) & 0.863007 (13) \\
 LinkNet & 0.861908 (13) & 0.863004 (9) & 0.861638 (10) & 0.859198 (9) & 0.866305 (12) & 0.858717 (12) & 0.866134 (12) & 0.860678 (12) & 0.859856 (14) & 0.859355 (11) \\

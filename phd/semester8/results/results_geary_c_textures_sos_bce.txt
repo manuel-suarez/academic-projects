@@ -13,7 +13,7 @@ Metrics file:  epoch\_metrics.csv
 \subsubsection{Metric: precision, training step: test}
 \begin{tabular}{lllllllllll}
 \toprule
-Models & sar-gearys\_c-asm & sar-gearys\_c-dissimilarity & sar-gearys\_c-homogeneity & sar-gearys\_c-entropy & sar-gearys\_c-std & sar-gearys\_c-contrast & sar-gearys\_c-energy & sar-gearys\_c-mean & sar-gearys\_c-correlation & sar-gearys\_c-variance \\
+Models & gearys\_c-asm & gearys\_c-dissimilarity & gearys\_c-homogeneity & gearys\_c-entropy & gearys\_c-std & gearys\_c-contrast & gearys\_c-energy & gearys\_c-mean & gearys\_c-correlation & gearys\_c-variance \\
 \midrule
 UNet & 0.878040 (29) & 0.870462 (33) & 0.870718 (7) & 0.875595 (38) & 0.881582 (9) & 0.892320 (4) & 0.898975 (4) & 0.873010 (36) & 0.888711 (8) & 0.873189 (8) \\
 LinkNet & 0.868213 (28) & 0.877061 (36) & 0.862681 (40) & 0.867532 (4) & 0.905718 (37) & 0.863951 (32) & 0.901175 (7) & 0.863476 (7) & 0.878580 (10) & 0.870525 (8) \\
@@ -24,7 +24,7 @@ PSPNet & 0.872870 (39) & 0.862679 (33) & 0.882618 (7) & 0.885954 (39) & 0.855706
 \subsubsection{Metric: recall, training step: test}
 \begin{tabular}{lllllllllll}
 \toprule
-Models & sar-gearys\_c-asm & sar-gearys\_c-dissimilarity & sar-gearys\_c-homogeneity & sar-gearys\_c-entropy & sar-gearys\_c-std & sar-gearys\_c-contrast & sar-gearys\_c-energy & sar-gearys\_c-mean & sar-gearys\_c-correlation & sar-gearys\_c-variance \\
+Models & gearys\_c-asm & gearys\_c-dissimilarity & gearys\_c-homogeneity & gearys\_c-entropy & gearys\_c-std & gearys\_c-contrast & gearys\_c-energy & gearys\_c-mean & gearys\_c-correlation & gearys\_c-variance \\
 \midrule
 UNet & 0.900102 (35) & 0.920709 (4) & 0.901195 (1) & 0.894935 (13) & 0.908483 (4) & 0.905708 (2) & 0.864299 (15) & 0.900153 (7) & 0.907867 (7) & 0.914359 (9) \\
 LinkNet & 0.904703 (6) & 0.892783 (6) & 0.885848 (1) & 0.897025 (3) & 0.880857 (3) & 0.919590 (33) & 0.880857 (38) & 0.908603 (3) & 0.915943 (12) & 0.894863 (5) \\
@@ -35,7 +35,7 @@ PSPNet & 0.839335 (2) & 0.870769 (6) & 0.891285 (2) & 0.871822 (4) & 0.830729 (9
 \subsubsection{Metric: f1score, training step: test}
 \begin{tabular}{lllllllllll}
 \toprule
-Models & sar-gearys\_c-asm & sar-gearys\_c-dissimilarity & sar-gearys\_c-homogeneity & sar-gearys\_c-entropy & sar-gearys\_c-std & sar-gearys\_c-contrast & sar-gearys\_c-energy & sar-gearys\_c-mean & sar-gearys\_c-correlation & sar-gearys\_c-variance \\
+Models & gearys\_c-asm & gearys\_c-dissimilarity & gearys\_c-homogeneity & gearys\_c-entropy & gearys\_c-std & gearys\_c-contrast & gearys\_c-energy & gearys\_c-mean & gearys\_c-correlation & gearys\_c-variance \\
 \midrule
 UNet & 0.857677 (13) & 0.858898 (15) & 0.862541 (11) & 0.865731 (14) & 0.863884 (8) & 0.859810 (9) & 0.857852 (10) & 0.865593 (9) & 0.857950 (10) & 0.865478 (12) \\
 LinkNet & 0.860907 (8) & 0.859130 (10) & 0.857304 (12) & 0.860784 (11) & 0.861768 (9) & 0.856450 (12) & 0.856367 (14) & 0.860388 (10) & 0.857982 (9) & 0.858381 (12) \\

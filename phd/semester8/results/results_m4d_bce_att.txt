@@ -1,0 +1,48 @@
+Count models:  {'unet': 1}
+Validate:  [False]
+Namespace(models\_names=['unet'], encoders\_names=['resnet34', 'senet34', 'cbamnet34'], epochs='best', metrics=['precision', 'recall', 'f1score', 'm\_iou'], losses=['bce'], datasets=['m4d'], training\_steps=['test'], results\_path='results', metrics\_path='metrics', metrics\_file='epoch\_metrics.csv')
+Models names:  ['unet']
+Encoders names:  ['resnet34', 'senet34', 'cbamnet34']
+Metrics:  ['precision', 'recall', 'f1score', 'm\_iou']
+Losses:  ['bce']
+Datasets:  ['m4d']
+Training steps:  ['test']
+Results path:  results
+Metrics path:  metrics
+Metrics file:  epoch\_metrics.csv
+\subsubsection{Metric: precision, training step: test}
+\begin{tabular}{llll}
+\toprule
+Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
+\midrule
+UNet & 0.840870 (39) & 0.847581 (34) & 0.835660 (36) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: recall, training step: test}
+\begin{tabular}{llll}
+\toprule
+Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
+\midrule
+UNet & 0.747016 (5) & 0.771023 (4) & 0.763197 (40) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: f1score, training step: test}
+\begin{tabular}{llll}
+\toprule
+Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
+\midrule
+UNet & 0.772517 (11) & 0.770625 (9) & 0.767459 (15) \\
+\bottomrule
+\end{tabular}
+
+\subsubsection{Metric: m\_iou, training step: test}
+\begin{tabular}{llll}
+\toprule
+Models & ResNet34 & ResNet34+SE & ResNet34+CBAM \\
+\midrule
+UNet & 0.794610 (11) & 0.793381 (9) & 0.791095 (34) \\
+\bottomrule
+\end{tabular}
+

@@ -13,7 +13,7 @@ Metrics file:  epoch\_metrics.csv
 \subsubsection{Metric: precision, training step: test}
 \begin{tabular}{llllllllll}
 \toprule
-Models & ResNet34 & ResNet34+MR (add) & ResNet34+MR (cat) & ResNet34+MR (max) & ResNet34+MR (rand) & ResNet34+MR (alpha) & ResNet34+MR (alpha+pos) & ResNet34+MR (MLP) & ResNet34+MR (CNN) \\
+Models & ResNet34 & MR (add) & MR (cat) & MR (max) & MR (rand) & MR (alpha) & MR (alpha+pos) & MR (MLP) & MR (CNN) \\
 \midrule
 UNet & 0.884812 (5) & 0.871911 (38) & 0.862208 (36) & 0.891129 (32) & 0.837616 (6) & NA & NA & NA & NA \\
 LinkNet & 0.875601 (7) & 0.857120 (39) & 0.867851 (8) & 0.859235 (29) & 0.858925 (7) & 0.874449 (31) & 0.853914 (7) & 0.861582 (3) & 0.857819 (9) \\
@@ -24,7 +24,7 @@ PSPNet & 0.875480 (3) & 0.841376 (16) & 0.872779 (3) & 0.851184 (11) & 0.859558 
 \subsubsection{Metric: recall, training step: test}
 \begin{tabular}{llllllllll}
 \toprule
-Models & ResNet34 & ResNet34+MR (add) & ResNet34+MR (cat) & ResNet34+MR (max) & ResNet34+MR (rand) & ResNet34+MR (alpha) & ResNet34+MR (alpha+pos) & ResNet34+MR (MLP) & ResNet34+MR (CNN) \\
+Models & ResNet34 & MR (add) & MR (cat) & MR (max) & MR (rand) & MR (alpha) & MR (alpha+pos) & MR (MLP) & MR (CNN) \\
 \midrule
 UNet & 0.894522 (35) & 0.921935 (2) & 0.922148 (1) & 0.910517 (38) & 0.905457 (5) & NA & NA & NA & NA \\
 LinkNet & 0.901660 (1) & 0.895286 (7) & 0.941932 (4) & 0.909247 (5) & 0.909600 (6) & 0.906476 (7) & 0.907082 (6) & 0.919608 (6) & 0.923469 (7) \\
@@ -35,7 +35,7 @@ PSPNet & 0.840697 (31) & 0.883254 (6) & 0.887868 (9) & 0.866934 (6) & 0.878933 (
 \subsubsection{Metric: f1score, training step: test}
 \begin{tabular}{llllllllll}
 \toprule
-Models & ResNet34 & ResNet34+MR (add) & ResNet34+MR (cat) & ResNet34+MR (max) & ResNet34+MR (rand) & ResNet34+MR (alpha) & ResNet34+MR (alpha+pos) & ResNet34+MR (MLP) & ResNet34+MR (CNN) \\
+Models & ResNet34 & MR (add) & MR (cat) & MR (max) & MR (rand) & MR (alpha) & MR (alpha+pos) & MR (MLP) & MR (CNN) \\
 \midrule
 UNet & 0.864613 (8) & 0.865360 (8) & 0.868291 (9) & 0.865115 (5) & 0.862459 (6) & NA & NA & NA & NA \\
 LinkNet & 0.857404 (4) & 0.867294 (6) & 0.866074 (9) & 0.861528 (10) & 0.863873 (9) & 0.864823 (5) & 0.859090 (3) & 0.868774 (5) & 0.864757 (9) \\
@@ -46,7 +46,7 @@ PSPNet & 0.838653 (31) & 0.841991 (6) & 0.841466 (10) & 0.843262 (4) & 0.839434 
 \subsubsection{Metric: m\_iou, training step: test}
 \begin{tabular}{llllllllll}
 \toprule
-Models & ResNet34 & ResNet34+MR (add) & ResNet34+MR (cat) & ResNet34+MR (max) & ResNet34+MR (rand) & ResNet34+MR (alpha) & ResNet34+MR (alpha+pos) & ResNet34+MR (MLP) & ResNet34+MR (CNN) \\
+Models & ResNet34 & MR (add) & MR (cat) & MR (max) & MR (rand) & MR (alpha) & MR (alpha+pos) & MR (MLP) & MR (CNN) \\
 \midrule
 UNet & 0.810812 (8) & 0.810926 (8) & 0.812476 (9) & 0.810126 (9) & 0.804647 (6) & NA & NA & NA & NA \\
 LinkNet & 0.803220 (4) & 0.812627 (6) & 0.812390 (8) & 0.803744 (10) & 0.808640 (9) & 0.811794 (5) & 0.801220 (3) & 0.814670 (5) & 0.809896 (9) \\
